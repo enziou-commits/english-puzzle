@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>English Puzzle 🧩</title>
+<meta name="theme-color" content="#0f0f1a"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0f0f1a;color:#e0e0ff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+button{cursor:pointer;border:none;outline:none;font-family:inherit}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script>
+const ALL_QUESTIONS=(function(){const b=[];let _id=1;function add(cat,level,sentence,answer,wrongs,hint){const opts=shuffle([answer,...wrongs].slice(0,4));b.push({id:_id++,cat,level,sentence,answer,opts,hint});}function shuffle(a){const r=[...a];for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]];}return r;}
+add("Verbes","A1","I ___ a student.","am",["is","are","be"],"be → I am, You are, He/She is");
+add("Verbes","A1","She ___ a teacher.","is",["am","are","be"],"be → He/She is");
+add("Verbes","A1","They ___ happy.","are",["is","am","be"],"be → They are");
+add("Verbes","A1","He ___ a car.","has",["have","had","is"],"have → He/She has");
+add("Verbes","A1","I ___ a dog.","have",["has","had","am"],"have → I have");
+add("Verbes","A1","She ___ her homework every day.","does",["do","did","make"],"do → He/She does");
+add("Verbes","A1","We ___ to school.","go",["goes","went","going"],"go → We go");
+add("Verbes","A1","He ___ to the park on weekends.","goes",["go","went","gone"],"go → He/She goes");
+add("Verbes","A1","I ___ breakfast every morning.","make",["makes","made","do"],"make → I make");
+add("Verbes","A1","She ___ coffee for everyone.","makes",["make","made","does"],"make → He/She makes");
+add("Verbes","A1","___ you a student?","Are",["Is","Am","Do"],"be → Are you...?");
+add("Verbes","A1","I ___ speak Spanish.","don't",["doesn't","isn't","not"],"don't → I don't");
+add("Verbes","A2","Yesterday I ___ to the store.","went",["go","goes","gone"],"go (past) → went");
+add("Verbes","A2","She ___ the door an hour ago.","opened",["open","opens","has opened"],"Past simple: verb+ed");
+add("Verbes","A2","I ___ already eaten lunch.","have",["has","had","am"],"Present perfect: have/has + past participle");
+add("Verbes","A2","He ___ lived here for ten years.","has",["have","had","is"],"have → He has lived");
+add("Verbes","A2","We ___ watch TV last night.","didn't",["don't","doesn't","weren't"],"Negative past: didn't + base verb");
+add("Verbes","A2","She ___ working when I called.","was",["were","is","has been"],"Past continuous: was/were + verb-ing");
+add("Verbes","A2","They ___ playing football when it started raining.","were",["was","are","have been"],"Past continuous: They were");
+add("Verbes","A2","I ___ my keys yesterday.","lost",["lose","loses","have lost"],"Past simple: lose → lost");
+add("Verbes","A2","He ___ a letter to his friend last week.","wrote",["write","writes","written"],"Past simple: write → wrote");
+add("Verbes","A2","We ___ never been to London.","have",["has","had","are"],"Present perfect: We have never been");
+add("Verbes","B1","By the time she arrived, I ___ waiting for two hours.","had been",["was","have been","were"],"Past perfect continuous: had been + verb-ing");
+add("Verbes","B1","If I had more time, I ___ learn Japanese.","would",["will","could have","should"],"Conditional 2: would + base verb");
+add("Verbes","B1","I wish I ___ more money.","had",["have","would have","could"],"wish + past simple for present regret");
+add("Verbes","B1","She suggested ___ to the cinema.","going",["go","to go","went"],"suggest + verb-ing (gerund)");
+add("Verbes","B1","He managed ___ the exam.","to pass",["passing","pass","passed"],"manage + to-infinitive");
+add("Verbes","B1","She ___ rather stay home tonight.","would",["will","should","could"],"would rather + base verb");
+add("Verbes","B1","He ___ have told me — I'm his friend!","should",["would","must","could"],"should have = aurait dû");
+add("Verbes","B1","By next year, I ___ studied English for five years.","will have",["will","would have","have"],"Future perfect: will have + past participle");
+add("Verbes","B1","She ___ to be a doctor when she was young.","used to want",["use to want","was wanting","wanted"],"used to + base verb = habitude passée");
+add("Verbes","B1","He kept ___ during the meeting.","interrupting",["interrupt","to interrupt","interrupted"],"keep + gerund");
+add("Verbes","B2","If I ___ known, I would have helped.","had",["would have","have","knew"],"Conditional 3: If + had + past participle");
+add("Verbes","B2","She ___ have told me earlier!","should",["would","could","must"],"should have = reproche");
+add("Verbes","B2","He ___ be at home — his light is on.","must",["should","would","has to"],"must = déduction logique forte");
+add("Verbes","B2","I ___ have left my phone at home — I can't find it.","might",["must","would","should"],"might have = possibilité passée");
+add("Verbes","B2","He ___ have finished, but he didn't even try.","could",["should","must","would"],"could have = possibilité non réalisée");
+add("Verbes","B2","I'd rather you ___ tell anyone about this.","didn't",["don't","won't","wouldn't"],"I'd rather + past subjunctive");
+add("Verbes","B2","The report ___ submitted by Friday.","must be",["must","has been","should"],"Passive modal: must be + past participle");
+add("Verbes","B2","He denies ___ the money.","having taken",["taking","to take","take"],"deny + having + past participle");
+add("Verbes","B2","I can't help ___ about her.","thinking",["think","to think","thought"],"can't help + gerund");
+add("Verbes","B2","If she ___ harder, she would have passed.","had worked",["worked","has worked","would work"],"Conditional 3: If + past perfect → would have");
+add("Verbes","B2","Unless you ___ now, you'll miss the train.","leave",["left","will leave","would leave"],"Unless = if not");
+add("Verbes","B2","She said she ___ a doctor.","was",["is","would be","has been"],"Reported speech: is → was");
+add("Verbes","B2","He told me he ___ the report the next day.","would submit",["will submit","submits","submitted"],"Reported speech: will → would");
+add("Verbes","B2","She asked me if I ___ help her.","could",["can","will","would"],"Reported question: can → could");
+add("Verbes","B2","The building ___ since 2019.","has been renovated",["has renovated","was renovated","is renovated"],"Passive present perfect");
+add("Verbes","C1","Had I known earlier, I ___ acted differently.","would have",["had","would","could have"],"Inversion conditional 3: Had I known = If I had known");
+add("Verbes","C1","Not only ___ he arrive late, but he also forgot the documents.","did",["was","had","has"],"Not only + inversion: did he arrive");
+add("Verbes","C1","Were I in your position, I ___ refuse the offer.","would",["will","had","could have"],"Inversion conditional 2: Were I = If I were");
+add("Verbes","C1","Little ___ they know about what was coming.","did",["had","were","would"],"Little + inversion: Little did they know");
+add("Verbes","C1","Scarcely ___ sat down when the phone rang.","had she",["she had","has she","did she"],"Scarcely had + subject + past participle");
+add("Verbes","C1","It was the budget ___ the team disagreed about.","that",["which","who","whom"],"Cleft sentence: It was X that...");
+add("Verbes","C1","Only after she left ___ realise what had happened.","did he",["he did","had he","he had"],"Only after + inversion");
+add("Modaux","B1","You ___ smoke here. It's forbidden.","mustn't",["don't have to","can't","shouldn't"],"mustn't = interdit (obligation négative)");
+add("Modaux","B1","You ___ come if you don't want to. It's optional.","don't have to",["mustn't","can't","shouldn't"],"don't have to = pas obligatoire");
+add("Modaux","B1","She ___ be sick — she looks terrible.","must",["should","might","would"],"must = déduction logique forte");
+add("Modaux","B1","You ___ finish this by tomorrow — it's urgent.","have to",["must","need","should"],"have to = obligation externe");
+add("Modaux","B1","She ___ speak three languages — she's amazing!","can",["could","is able","manages"],"can = capacité présente");
+add("Modaux","B1","He ___ be the new manager — I've heard rumours.","might",["must","will","should"],"might = possibilité (moins certain que must)");
+add("Modaux","B1","We ___ book in advance or we won't get seats.","should",["must","have to","need"],"should = conseil, recommandation");
+add("Modaux","B1","You ___ wear a seatbelt — it's the law.","must",["should","have to","need"],"must = obligation forte/loi");
+add("Modaux","B2","You ___ have told me! I would have come earlier.","should",["must","could","would"],"should have = reproche / regret");
+add("Modaux","B2","She ___ have passed — she studied so hard.","must",["should","could","might"],"must have = déduction passée forte");
+add("Modaux","B2","I ___ have taken that job offer — what a mistake.","should",["must","would","could"],"should have = regret");
+add("Modaux","B2","She ___ have forgotten — she never forgets anything.","can't",["mustn't","shouldn't","wouldn't"],"can't have = déduction négative passée");
+add("Modaux","B2","He ___ have left already — his coat is gone.","must",["should","might","could"],"must have = déduction logique passée");
+add("Prépositions","A1","She is ___ home.","at",["in","on","by"],"at home, at school, at work");
+add("Prépositions","A1","He arrives ___ Monday.","on",["at","in","by"],"on + day of week");
+add("Prépositions","A1","We'll meet ___ 3 o'clock.","at",["in","on","by"],"at + precise time");
+add("Prépositions","A1","I was born ___ 1995.","in",["at","on","by"],"in + year/month");
+add("Prépositions","A1","The book is ___ the table.","on",["at","in","under"],"on = sur");
+add("Prépositions","A2","She lives ___ Paris.","in",["at","on","by"],"in + city/country");
+add("Prépositions","A2","They went ___ holiday last summer.","on",["in","at","for"],"go on holiday");
+add("Prépositions","A2","I'll be there ___ five minutes.","in",["at","on","within"],"in + duration (future)");
+add("Prépositions","B1","He is accused ___ theft.","of",["for","with","about"],"accuse of");
+add("Prépositions","B1","She is responsible ___ the project.","for",["of","with","about"],"responsible for");
+add("Prépositions","B1","I'm not aware ___ the problem.","of",["about","with","for"],"aware of");
+add("Prépositions","B1","He succeeded ___ passing the exam.","in",["at","for","with"],"succeed in + gerund");
+add("Prépositions","B1","She is keen ___ learning new things.","on",["for","about","of"],"keen on + gerund");
+add("Prépositions","B1","I insist ___ paying for dinner.","on",["in","for","about"],"insist on + gerund");
+add("Prépositions","B1","She apologised ___ being late.","for",["about","of","on"],"apologise for + gerund");
+add("Prépositions","B1","I'm looking forward ___ seeing you.","to",["at","for","about"],"look forward to + gerund");
+add("Prépositions","B1","He is good ___ mathematics.","at",["in","with","for"],"good at");
+add("Prépositions","B1","She is married ___ a doctor.","to",["with","by","of"],"married to (not married with)");
+add("Prépositions","B2","She has been working here ___ 2018.","since",["for","from","in"],"since + point in time; for + duration");
+add("Prépositions","B2","The results are ___ line with expectations.","in",["on","at","by"],"in line with");
+add("Prépositions","B2","She objected ___ the proposed changes.","to",["against","about","for"],"object to");
+add("Prépositions","B2","He was convicted ___ fraud.","of",["for","with","about"],"convicted of");
+add("Prépositions","B2","I came across an interesting article ___ accident.","by",["with","on","in"],"by accident, by chance, by mistake");
+add("Prépositions","C1","___ his extensive experience, he struggled with the task.","Despite",["Although","However","Even if"],"despite + noun (no verb after)");
+add("Prépositions","C1","The policy is ___ keeping with modern standards.","in",["on","at","by"],"in keeping with = en accord avec");
+add("Prépositions","C1","The decision was made ___ the face of strong opposition.","in",["on","at","against"],"in the face of = face à");
+add("Adverbes","B1","He speaks English ___ well.","surprisingly",["surprising","surprised","surprise"],"adverb = adjective + ly");
+add("Adverbes","B1","He ___ arrives on time — he's always late.","rarely",["rare","hard","hardly"],"rarely = presque jamais");
+add("Adverbes","B1","I ___ understood what she meant until much later.","barely",["hard","hardly","near"],"barely = à peine");
+add("Adverbes","B1","He was ___ surprised by the result.","utterly",["utter","uttering","utterance"],"utterly = complètement");
+add("Adverbes","B1","The film was ___ better than the book.","considerably",["considerable","consider","much"],"considerably = nettement");
+add("Adverbes","B2","The two theories are ___ different.","fundamentally",["fundamental","fundament","founding"],"fundamentally = fondamentalement");
+add("Adverbes","B2","She was ___ upset by the news.","visibly",["visible","vision","visually"],"visibly = visiblement");
+add("Adverbes","B2","The results were ___ better than last year.","significantly",["significant","signify","sign"],"significantly = de façon significative");
+add("Adverbes","B2","He ___ refused to answer any questions.","flatly",["flat","flattery","flatten"],"flatly refused = a catégoriquement refusé");
+add("Adverbes","B2","The project was ___ completed ahead of schedule.","remarkably",["remarkable","remark","remarked"],"remarkably = remarquablement");
+add("Adverbes","B2","He ___ changed his mind at the last minute.","abruptly",["abrupt","abruptness","sudden"],"abruptly = brusquement");
+add("Adverbes","C1","The minister ___ denied any involvement in the scandal.","categorically",["category","categorical","categoric"],"categorically denied = nié catégoriquement");
+add("Adverbes","C1","She was ___ aware of the risks involved.","acutely",["acute","acuteness","sharply"],"acutely aware = pleinement conscient");
+add("Adverbes","C1","The results were ___ consistent with our hypothesis.","broadly",["broad","breadth","overall"],"broadly = dans l'ensemble");
+add("Adverbes","B1","The project was expensive. ___, it was completed on time.","Nevertheless",["However","Although","Despite"],"Nevertheless = néanmoins");
+add("Adverbes","B1","___ the rain, we decided to go for a walk.","Despite",["Although","However","Nevertheless"],"Despite + noun/gerund (no verb)");
+add("Adverbes","B2","___ she was exhausted, she continued working.","Although",["Despite","Nevertheless","However"],"Although + clause (with verb)");
+add("Adverbes","B2","The results were positive. ___, more research is needed.","That said",["However","Besides","Moreover"],"That said = cela dit (nuance)");
+add("Adverbes","C1","___ the new data, the team revised their conclusions.","In light of",["In terms of","With regard","Regardless of"],"In light of = à la lumière de");
+add("Adjectifs","B1","This is a very ___ situation. Nobody expected it.","unexpected",["unexpecting","unexpect","unexcepted"],"unexpected = inattendu");
+add("Adjectifs","B1","She gave a very ___ speech at the conference.","compelling",["compelled","compel","compulsion"],"compelling = convaincant, captivant");
+add("Adjectifs","B1","He has a very ___ personality — everyone likes him.","outgoing",["outgo","outside","outwards"],"outgoing = extraverti, sociable");
+add("Adjectifs","B1","The results were quite ___ given the circumstances.","remarkable",["remark","remarked","remarkably"],"remarkable = remarquable");
+add("Adjectifs","B1","She is very ___ about her work — she never makes mistakes.","meticulous",["metric","method","methodic"],"meticulous = méticuleux");
+add("Adjectifs","B1","The film was ___ — I fell asleep halfway through.","tedious",["tidy","tender","technical"],"tedious = ennuyeux, fastidieux");
+add("Adjectifs","B2","The company's decision was seen as ___. Nobody understood why.","baffling",["baffle","baffled","bafflement"],"baffling = déconcertant");
+add("Adjectifs","B2","She felt completely ___ after the long negotiation.","exhausted",["exhausting","exhaust","exhaustion"],"exhausted = épuisé (ressenti)");
+add("Adjectifs","B2","The evidence against him was ___.","overwhelming",["overwhelmed","overwhelm","overwhich"],"overwhelming = accablant");
+add("Adjectifs","B2","She gave a very ___ account of what happened.","coherent",["cohesion","cohere","coherence"],"coherent = cohérent, logique");
+add("Adjectifs","C1","The plan has ___ implications for the entire industry.","far-reaching",["far","reach","reaching"],"far-reaching = aux conséquences importantes");
+add("Articles/Pronoms","A1","___ sun rises in the east.","The",["A","An","—"],"the = défini (unique, connu)");
+add("Articles/Pronoms","A1","I saw ___ elephant at the zoo.","an",["a","the","—"],"an before vowel sound");
+add("Articles/Pronoms","A1","He gave ___ book to his friend.","a",["an","the","—"],"a before consonant sound");
+add("Articles/Pronoms","A1","I love ___ music.","—",["the","a","an"],"no article for general concepts");
+add("Articles/Pronoms","B1","___ information you gave me was very helpful.","The",["An","A","—"],"the = specific (already known)");
+add("Articles/Pronoms","B1","He plays ___ guitar in a band.","the",["a","—","an"],"play the + instrument");
+add("Articles/Pronoms","B1","I need someone ___ I can trust completely.","whom",["who","that","which"],"whom = object pronoun (formal)");
+add("Articles/Pronoms","B1","The company, ___ was founded in 1990, is very successful.","which",["that","who","whom"],"which = non-restrictive clause for things");
+add("Articles/Pronoms","B1","That is the man ___ car was stolen.","whose",["who's","whom","which"],"whose = possessif relatif");
+add("Articles/Pronoms","B2","___ patience is a virtue.","—",["The","A","An"],"no article for abstract qualities in general");
+add("Articles/Pronoms","B2","He to ___ he had confided never told anyone.","whom",["who","that","which"],"to whom = préposition + pronom relatif formel");
+add("Articles/Pronoms","C1","This is the very issue ___ we need to address.","that",["which","who","whom"],"restrictive clause after 'the very'");
+add("Verbes","B1","I enjoy ___ in the countryside.","walking",["walk","to walk","walked"],"enjoy + gerund");
+add("Verbes","B1","She promised ___ on time.","to arrive",["arriving","arrive","arrived"],"promise + to-infinitive");
+add("Verbes","B1","He avoided ___ to the meeting.","going",["go","to go","went"],"avoid + gerund");
+add("Verbes","B2","I remember ___ her at the conference — she was brilliant.","meeting",["to meet","met","meet"],"remember + gerund = souvenir passé");
+add("Verbes","B2","She stopped ___ when the doctor advised her to.","smoking",["to smoke","smoke","smoked"],"stop + gerund = arrêter de faire");
+add("Verbes","B2","He stopped ___ his phone — it had fallen on the floor.","to pick up",["picking up","pick up","picked up"],"stop + to-inf = s'arrêter pour faire");
+add("Verbes","B1","I need to ___ this problem before the meeting.","sort out",["sort","sort up","sort through"],"sort out = résoudre, régler");
+add("Verbes","B2","The meeting was ___ until next week.","put off",["put away","put back","put out"],"put off = reporter");
+add("Verbes","B2","I came ___ some old photos while cleaning the attic.","across",["over","about","around"],"come across = tomber sur par hasard");
+add("Verbes","B2","She was asked to ___ the new employees.","look after",["look at","look into","look up"],"look after = prendre soin de");
+return b;})();
+
+const {useState,useEffect,useCallback,useMemo}=React;
+const LEVEL_COLORS={A1:"#00d9a3",A2:"#00b894",B1:"#6c63ff",B2:"#a855f7",C1:"#ff6584",C2:"#ff4757"};
+const CAT_COLORS={"Verbes":"#6c63ff","Prépositions":"#ff6584","Adverbes":"#ffd93d","Adjectifs":"#00d9a3","Articles/Pronoms":"#00b894","Modaux":"#a855f7"};
+const LEVELS=["all","A1","A2","B1","B2","C1","C2"];
+const CATS=["all","Verbes","Modaux","Prépositions","Adverbes","Adjectifs","Articles/Pronoms"];
+
+function shuffle(a){const r=[...a];for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]];}return r;}
+function loadLS(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d;}catch{return d;}}
+function saveLS(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch{}}
+
+function estimateToeic(stats){
+  if(!stats||stats.total===0)return{score:400,level:"A2",pct:0};
+  const pct=stats.correct/stats.total;
+  const byLevel=stats.byLevel||{};
+  const weights={A1:0.05,A2:0.10,B1:0.20,B2:0.25,C1:0.25,C2:0.15};
+  let ws=0,tw=0;
+  Object.entries(byLevel).forEach(([lvl,d])=>{if(d.total>0&&weights[lvl]){ws+=(d.correct/d.total)*weights[lvl];tw+=weights[lvl];}});
+  const ap=tw>0?ws/tw:pct;
+  const toeic=Math.round(10+ap*980);
+  const level=toeic<250?"A1":toeic<400?"A2":toeic<600?"B1":toeic<750?"B2":toeic<900?"C1":"C2";
+  return{score:toeic,level,pct:Math.round(ap*100)};
+}
+
+function App(){
+  const[mode,setMode]=useState("home");
+  const[level,setLevel]=useState("B1");
+  const[cat,setCat]=useState("all");
+  const[pool,setPool]=useState([]);
+  const[poolIdx,setPoolIdx]=useState(0);
+  const[current,setCurrent]=useState(null);
+  const[chosen,setChosen]=useState(null);
+  const[answered,setAnswered]=useState(false);
+  const[score,setScore]=useState(0);
+  const[streak,setStreak]=useState(0);
+  const[total,setTotal]=useState(0);
+  const[errors,setErrors]=useState(()=>loadLS("ep_errors3",{}));
+  const[stats,setStats]=useState(()=>loadLS("ep_stats3",{total:0,correct:0,byLevel:{},byCat:{}}));
+  const[dailyErrors,setDailyErrors]=useState([]);
+  const[dailyIdx,setDailyIdx]=useState(0);
+  const[todayDone,setTodayDone]=useState(()=>loadLS("ep_today","")===new Date().toDateString());
+
+  const buildPool=useCallback((lvl,ct)=>{
+    return shuffle(ALL_QUESTIONS.filter(q=>{
+      if(lvl!=="all"&&q.level!==lvl)return false;
+      if(ct!=="all"&&q.cat!==ct)return false;
+      return true;
+    }));
+  },[]);
+
+  const startQuiz=useCallback(()=>{
+    const p=buildPool(level,cat);
+    setPool(p);setPoolIdx(0);setCurrent(p[0]||null);
+    setChosen(null);setAnswered(false);setScore(0);setStreak(0);setTotal(0);
+    setMode("quiz");
+  },[level,cat,buildPool]);
+
+  const startErrorMode=useCallback(()=>{
+    const top=Object.entries(errors).sort((a,b)=>b[1]-a[1]).slice(0,10).map(e=>parseInt(e[0]));
+    const qs=shuffle(ALL_QUESTIONS.filter(q=>top.includes(q.id)));
+    setDailyErrors(qs);setDailyIdx(0);
+    setChosen(null);setAnswered(false);setScore(0);setStreak(0);setTotal(0);
+    setMode("errors");
+  },[errors]);
+
+  const currentQ=mode==="errors"?dailyErrors[dailyIdx]:current;
+
+  const handleAnswer=useCallback((opt)=>{
+    if(answered||!currentQ)return;
+    setChosen(opt);setAnswered(true);
+    const ok=opt===currentQ.answer;
+    setScore(s=>ok?s+1:s);setStreak(s=>ok?s+1:0);setTotal(t=>t+1);
+    const ne={...errors};
+    if(!ok){ne[currentQ.id]=(ne[currentQ.id]||0)+1;}
+    else if(ne[currentQ.id]){ne[currentQ.id]=Math.max(0,ne[currentQ.id]-1);if(ne[currentQ.id]===0)delete ne[currentQ.id];}
+    setErrors(ne);saveLS("ep_errors3",ne);
+    const ns={total:stats.total+1,correct:stats.correct+(ok?1:0),byLevel:{...stats.byLevel},byCat:{...stats.byCat}};
+    const lvl=currentQ.level,ct=currentQ.cat;
+    ns.byLevel[lvl]=ns.byLevel[lvl]||{total:0,correct:0};ns.byLevel[lvl].total++;if(ok)ns.byLevel[lvl].correct++;
+    ns.byCat[ct]=ns.byCat[ct]||{total:0,correct:0};ns.byCat[ct].total++;if(ok)ns.byCat[ct].correct++;
+    setStats(ns);saveLS("ep_stats3",ns);
+  },[answered,currentQ,errors,stats]);
+
+  const nextQ=useCallback(()=>{
+    setChosen(null);setAnswered(false);
+    if(mode==="errors"){
+      const ni=dailyIdx+1;
+      if(ni>=dailyErrors.length){saveLS("ep_today",new Date().toDateString());setTodayDone(true);setMode("home");}
+      else setDailyIdx(ni);
+    }else{
+      const ni=poolIdx+1;
+      if(ni>=pool.length){const p=buildPool(level,cat);setPool(p);setPoolIdx(0);setCurrent(p[0]);}
+      else{setPoolIdx(ni);setCurrent(pool[ni]);}
+    }
+  },[mode,dailyIdx,dailyErrors,poolIdx,pool,level,cat,buildPool]);
+
+  const toeic=useMemo(()=>estimateToeic(stats),[stats]);
+  const errorCount=Object.keys(errors).length;
+  const e=React.createElement;
+  const s=(style)=>style;
+
+  // ── HOME ──
+  if(mode==="home"){
+    const toeicRanges=[{level:"A1",label:"Débutant",min:10,max:250},{level:"A2",label:"Élémentaire",min:250,max:400},{level:"B1",label:"Intermédiaire",min:400,max:600},{level:"B2",label:"Indépendant",min:600,max:750},{level:"C1",label:"Avancé",min:750,max:900},{level:"C2",label:"Maîtrise",min:900,max:990}];
+    const barPct=Math.min(100,((toeic.score-10)/980)*100);
+    return e("div",{style:{maxWidth:480,margin:"0 auto",padding:"20px 16px",minHeight:"100vh"}},
+      e("div",{style:{textAlign:"center",marginBottom:24}},
+        e("div",{style:{fontSize:32,marginBottom:4}},"🧩"),
+        e("div",{style:{fontSize:22,fontWeight:700,color:"#fff"}},"English Puzzle"),
+        e("div",{style:{fontSize:12,color:"#7070a0",marginTop:2}},"Entraînement TOEIC • Niveaux A1 → C2")
+      ),
+      // TOEIC Card
+      e("div",{style:{background:"#1a1a2e",borderRadius:16,padding:"20px 16px",marginBottom:14,border:"1px solid #2a2a4a"}},
+        e("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:16}},
+          e("div",null,
+            e("div",{style:{fontSize:12,color:"#7070a0",marginBottom:4}},"Score TOEIC estimé"),
+            e("div",{style:{fontSize:40,fontWeight:800,color:LEVEL_COLORS[toeic.level]||"#6c63ff"}},toeic.score),
+            e("div",{style:{fontSize:13,color:"#9090b0",marginTop:2}},
+              "Niveau ",e("span",{style:{color:LEVEL_COLORS[toeic.level],fontWeight:700}},toeic.level),
+              " • ",toeicRanges.find(r=>r.level===toeic.level)?.label
+            )
+          ),
+          e("div",{style:{width:72,height:72,borderRadius:"50%",border:`4px solid ${LEVEL_COLORS[toeic.level]||"#6c63ff"}`,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",background:"#0f0f1a"}},
+            e("div",{style:{fontSize:18,fontWeight:800,color:"#fff"}},toeic.pct+"%"),
+            e("div",{style:{fontSize:10,color:"#7070a0"}},"réussite")
+          )
+        ),
+        e("div",{style:{height:8,background:"#0f0f1a",borderRadius:4,overflow:"hidden",marginBottom:8}},
+          e("div",{style:{height:"100%",width:barPct+"%",background:`linear-gradient(90deg,#00d9a3,${LEVEL_COLORS[toeic.level]})`,borderRadius:4,transition:"width 0.6s"}})
+        ),
+        e("div",{style:{display:"flex",gap:3,marginBottom:12}},
+          toeicRanges.map(r=>e("div",{key:r.level,style:{flex:1,padding:"5px 0",borderRadius:6,textAlign:"center",background:r.level===toeic.level?LEVEL_COLORS[r.level]+"33":"#0f0f1a",border:`1px solid ${r.level===toeic.level?LEVEL_COLORS[r.level]:"#2a2a4a"}`}},
+            e("div",{style:{fontSize:11,fontWeight:700,color:LEVEL_COLORS[r.level]}},r.level),
+            e("div",{style:{fontSize:9,color:"#6060a0"}},r.min)
+          ))
+        ),
+        stats.total>0&&e("div",{style:{fontSize:11,color:"#5050a0",textAlign:"center"}},`${stats.total} questions • ${stats.correct} correctes`)
+      ),
+      // Erreurs Card
+      errorCount>0&&e("div",{style:{background:todayDone?"#1a2a1a":"#1a1a2e",borderRadius:14,padding:16,marginBottom:12,border:`1px solid ${todayDone?"#2a4a2a":"#ff658444"}`,cursor:todayDone?"default":"pointer"},onClick:!todayDone?startErrorMode:undefined},
+        e("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center"}},
+          e("div",null,
+            e("div",{style:{display:"flex",alignItems:"center",gap:8,marginBottom:4}},
+              e("span",{style:{fontSize:20}},todayDone?"✅":"🔥"),
+              e("span",{style:{fontWeight:700,color:todayDone?"#2ecc71":"#ff6584",fontSize:15}},todayDone?"Session terminée !":"10 questions du jour")
+            ),
+            e("div",{style:{fontSize:12,color:"#7070a0"}},todayDone?"Reviens demain pour un nouveau set":`${errorCount} erreur${errorCount>1?"s":""} à corriger`)
+          ),
+          !todayDone&&e("div",{style:{background:"#ff658422",color:"#ff6584",padding:"8px 14px",borderRadius:8,fontWeight:700,fontSize:13}},"Go →")
+        )
+      ),
+      // Quiz config
+      e("div",{style:{background:"#1a1a2e",borderRadius:14,padding:16,marginBottom:12,border:"1px solid #2a2a4a"}},
+        e("div",{style:{fontSize:13,color:"#9090b0",marginBottom:10,fontWeight:600}},"Entraînement libre"),
+        e("div",{style:{marginBottom:10}},
+          e("div",{style:{fontSize:11,color:"#6060a0",marginBottom:6}},"NIVEAU"),
+          e("div",{style:{display:"flex",flexWrap:"wrap",gap:6}},
+            LEVELS.map(l=>e("button",{key:l,onClick:()=>setLevel(l),style:{padding:"6px 12px",borderRadius:20,fontSize:12,fontWeight:600,background:level===l?(LEVEL_COLORS[l]||"#6c63ff")+"33":"#0f0f1a",color:level===l?(LEVEL_COLORS[l]||"#e0e0ff"):"#7070a0",border:`1px solid ${level===l?(LEVEL_COLORS[l]||"#6c63ff"):"#2a2a4a"}`}},l==="all"?"Tous":l))
+          )
+        ),
+        e("div",{style:{marginBottom:14}},
+          e("div",{style:{fontSize:11,color:"#6060a0",marginBottom:6}},"CATÉGORIE"),
+          e("div",{style:{display:"flex",flexWrap:"wrap",gap:6}},
+            CATS.map(c=>e("button",{key:c,onClick:()=>setCat(c),style:{padding:"6px 12px",borderRadius:20,fontSize:12,fontWeight:600,background:cat===c?(CAT_COLORS[c]||"#6c63ff")+"33":"#0f0f1a",color:cat===c?(CAT_COLORS[c]||"#e0e0ff"):"#7070a0",border:`1px solid ${cat===c?(CAT_COLORS[c]||"#6c63ff"):"#2a2a4a"}`}},c==="all"?"Toutes":c))
+          )
+        ),
+        e("button",{onClick:startQuiz,style:{width:"100%",padding:"14px",borderRadius:12,fontWeight:700,fontSize:16,background:"linear-gradient(135deg,#6c63ff,#a855f7)",color:"#fff",boxShadow:"0 4px 20px #6c63ff44"}},"🚀 Commencer")
+      ),
+      e("button",{onClick:()=>setMode("stats"),style:{width:"100%",padding:12,borderRadius:12,fontWeight:600,fontSize:14,background:"#1a1a2e",color:"#7070a0",border:"1px solid #2a2a4a"}},"📊 Statistiques détaillées")
+    );
+  }
+
+  // ── QUIZ / ERRORS ──
+  if((mode==="quiz"||mode==="errors")&&currentQ){
+    const ok=answered&&chosen===currentQ.answer;
+    const isEM=mode==="errors";
+    const qNum=isEM?dailyIdx+1:poolIdx+1;
+    const qTot=isEM?dailyErrors.length:pool.length;
+    return e("div",{style:{maxWidth:480,margin:"0 auto",padding:"16px",minHeight:"100vh"}},
+      e("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:16}},
+        e("button",{onClick:()=>setMode("home"),style:{background:"#1a1a2e",color:"#7070a0",padding:"8px 14px",borderRadius:10,fontSize:13,border:"1px solid #2a2a4a"}},"← Accueil"),
+        e("div",{style:{display:"flex",gap:12,fontSize:13,fontWeight:700}},
+          e("span",{style:{color:"#00d9a3"}},`✓ ${score}`),
+          e("span",{style:{color:"#ffd93d"}},streak>=3?`🔥${streak}`:`× ${total-score}`)
+        )
+      ),
+      e("div",{style:{marginBottom:16}},
+        e("div",{style:{display:"flex",justifyContent:"space-between",fontSize:11,color:"#5050a0",marginBottom:4}},
+          e("span",null,isEM?"🔥 Erreurs récurrentes":`${currentQ.cat} • ${currentQ.level}`),
+          e("span",null,`${qNum}/${qTot}`)
+        ),
+        e("div",{style:{height:4,background:"#1a1a2e",borderRadius:2}},
+          e("div",{style:{height:"100%",borderRadius:2,width:`${(qNum/qTot)*100}%`,background:isEM?"#ff6584":(LEVEL_COLORS[currentQ.level]||"#6c63ff"),transition:"width 0.3s"}})
+        )
+      ),
+      e("div",{style:{marginBottom:14,display:"flex",gap:8}},
+        e("span",{style:{padding:"4px 10px",borderRadius:20,fontSize:11,fontWeight:700,background:(LEVEL_COLORS[currentQ.level]||"#6c63ff")+"22",color:LEVEL_COLORS[currentQ.level]||"#6c63ff",border:`1px solid ${LEVEL_COLORS[currentQ.level]||"#6c63ff"}44`}},currentQ.level),
+        e("span",{style:{padding:"4px 10px",borderRadius:20,fontSize:11,fontWeight:700,background:(CAT_COLORS[currentQ.cat]||"#6c63ff")+"22",color:CAT_COLORS[currentQ.cat]||"#6c63ff",border:`1px solid ${CAT_COLORS[currentQ.cat]||"#6c63ff"}44`}},currentQ.cat)
+      ),
+      e("div",{style:{background:"#1a1a2e",borderRadius:16,padding:"24px 20px",marginBottom:20,border:"1px solid #2a2a4a",fontSize:20,fontWeight:600,lineHeight:1.5,color:"#fff"}},currentQ.sentence),
+      e("div",{style:{display:"flex",flexDirection:"column",gap:10,marginBottom:20}},
+        currentQ.opts.map(opt=>{
+          let bg="#1a1a2e",border="#2a2a4a",color="#c0c0e0";
+          if(answered){if(opt===currentQ.answer){bg="#00d9a322";border="#00d9a3";color="#00d9a3";}else if(opt===chosen){bg="#ff658422";border="#ff6584";color="#ff6584";}}
+          return e("button",{key:opt,onClick:()=>handleAnswer(opt),style:{padding:"14px 18px",borderRadius:12,textAlign:"left",fontSize:16,fontWeight:600,background:bg,color,border:`2px solid ${border}`,transition:"all 0.15s"}},
+            answered&&opt===currentQ.answer?"✓ ":answered&&opt===chosen&&opt!==currentQ.answer?"✗ ":"",opt
+          );
+        })
+      ),
+      answered&&e("div",{style:{background:ok?"#00d9a311":"#ff658411",border:`1px solid ${ok?"#00d9a344":"#ff658444"}`,borderRadius:12,padding:"14px 16px",marginBottom:16}},
+        e("div",{style:{fontWeight:700,color:ok?"#00d9a3":"#ff6584",marginBottom:4,fontSize:14}},ok?"✓ Correct !":"✗ Réponse : "+currentQ.answer),
+        e("div",{style:{fontSize:13,color:"#9090b0"}},currentQ.hint)
+      ),
+      answered&&e("button",{onClick:nextQ,style:{width:"100%",padding:14,borderRadius:12,fontWeight:700,fontSize:16,background:ok?"linear-gradient(135deg,#00d9a3,#00b894)":"linear-gradient(135deg,#6c63ff,#a855f7)",color:"#fff"}},isEM&&dailyIdx>=dailyErrors.length-1?"🏁 Terminer":"Question suivante →")
+    );
+  }
+
+  // ── STATS ──
+  if(mode==="stats"){
+    const ti=estimateToeic(stats);
+    return e("div",{style:{maxWidth:480,margin:"0 auto",padding:"16px",minHeight:"100vh"}},
+      e("div",{style:{display:"flex",alignItems:"center",gap:12,marginBottom:20}},
+        e("button",{onClick:()=>setMode("home"),style:{background:"#1a1a2e",color:"#7070a0",padding:"8px 14px",borderRadius:10,fontSize:13,border:"1px solid #2a2a4a"}},"← Retour"),
+        e("span",{style:{fontWeight:700,fontSize:18,color:"#fff"}},"📊 Mes Statistiques")
+      ),
+      e("div",{style:{background:"#1a1a2e",borderRadius:14,padding:16,marginBottom:12,border:"1px solid #2a2a4a"}},
+        e("div",{style:{fontSize:12,color:"#7070a0",marginBottom:8}},"Score TOEIC estimé"),
+        e("div",{style:{fontSize:42,fontWeight:800,color:LEVEL_COLORS[ti.level]}},ti.score),
+        e("div",{style:{fontSize:13,color:"#9090b0"}},"Niveau ",e("span",{style:{color:LEVEL_COLORS[ti.level],fontWeight:700}},ti.level)," • ",stats.total," questions • ",ti.pct,"% de réussite")
+      ),
+      e("div",{style:{background:"#1a1a2e",borderRadius:14,padding:16,marginBottom:12,border:"1px solid #2a2a4a"}},
+        e("div",{style:{fontSize:13,fontWeight:700,color:"#9090b0",marginBottom:12}},"PAR NIVEAU"),
+        ["A1","A2","B1","B2","C1","C2"].map(lvl=>{
+          const d=stats.byLevel?.[lvl]||{total:0,correct:0};
+          const pct=d.total>0?Math.round(d.correct/d.total*100):0;
+          return e("div",{key:lvl,style:{marginBottom:10}},
+            e("div",{style:{display:"flex",justifyContent:"space-between",fontSize:12,marginBottom:4}},
+              e("span",{style:{color:LEVEL_COLORS[lvl],fontWeight:700}},lvl),
+              e("span",{style:{color:"#7070a0"}},d.total>0?`${d.correct}/${d.total} (${pct}%)`:"—")
+            ),
+            d.total>0&&e("div",{style:{height:6,background:"#0f0f1a",borderRadius:3}},
+              e("div",{style:{height:"100%",width:pct+"%",background:LEVEL_COLORS[lvl],borderRadius:3}})
+            )
+          );
+        })
+      ),
+      e("div",{style:{background:"#1a1a2e",borderRadius:14,padding:16,marginBottom:12,border:"1px solid #2a2a4a"}},
+        e("div",{style:{fontSize:13,fontWeight:700,color:"#9090b0",marginBottom:12}},"PAR CATÉGORIE"),
+        Object.entries(stats.byCat||{}).map(([ct,d])=>{
+          const pct=d.total>0?Math.round(d.correct/d.total*100):0;
+          return e("div",{key:ct,style:{marginBottom:10}},
+            e("div",{style:{display:"flex",justifyContent:"space-between",fontSize:12,marginBottom:4}},
+              e("span",{style:{color:CAT_COLORS[ct]||"#6c63ff",fontWeight:700}},ct),
+              e("span",{style:{color:"#7070a0"}},`${d.correct}/${d.total} (${pct}%)`)
+            ),
+            e("div",{style:{height:6,background:"#0f0f1a",borderRadius:3}},
+              e("div",{style:{height:"100%",width:pct+"%",background:CAT_COLORS[ct]||"#6c63ff",borderRadius:3}})
+            )
+          );
+        })
+      ),
+      e("button",{onClick:()=>{if(confirm("Remettre à zéro ?")){{const emp={total:0,correct:0,byLevel:{},byCat:{}};setStats(emp);saveLS("ep_stats3",emp);}}},style:{width:"100%",padding:12,borderRadius:12,color:"#5050a0",background:"transparent",border:"1px solid #2a2a4a",fontSize:13}},"🗑 Réinitialiser les statistiques")
+    );
+  }
+
+  return null;
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+</script>
+</body>
+</html>
