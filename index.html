@@ -1253,11 +1253,13 @@ function buildVerbPool(verbKey,tenseFilter){
   const tenses=tenseFilter==="all"?Object.keys(vd.tenses):[tenseFilter];
   tenses.forEach(tenseName=>{
     const t=vd.tenses[tenseName];
-    vd.templates.forEach(tmpl=>{
+    vd.templates.forEach(tmplRaw=>{
+      const tmpl=typeof tmplRaw==="function"?tmplRaw:tmplRaw[0];
+      if(typeof tmpl!=="function")return;
       subjects.forEach(subj=>{
         const answer=t.en[subj];
-        const rawSentence=tmpl(subj);
-        const sentence=Array.isArray(rawSentence)?rawSentence[0]:rawSentence;
+        const raw=tmpl(subj);
+        const sentence=Array.isArray(raw)?raw[0]:raw;
         const allForms=[...new Set(Object.values(t.en))].filter(f=>f!==answer);
         const otherKey=Object.keys(vd.tenses).find(k=>k!==tenseName);
         const otherForms=otherKey?[...new Set(Object.values(vd.tenses[otherKey].en))].filter(f=>f!==answer):[];
