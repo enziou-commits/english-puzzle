@@ -179,7 +179,6 @@ const VOCAB_AIRPORT=[
 {fr:"le chef de cabine",en:"purser",level:"B1",distractors:["senior flight attendant","cabin manager","cabin supervisor"]},
 {fr:"l'agent de piste",en:"ramp agent",level:"B1",distractors:["ground handler","baggage handler","operations agent"]},
 {fr:"le passage rien à déclarer",en:"green channel",level:"B1",distractors:["red channel","customs lane","nothing to declare lane"]},
-{fr:"le passage avec déclaration",en:"red channel",level:"B1",distractors:["green channel","customs lane","declaration lane"]},
 {fr:"le tarif non remboursable",en:"non-refundable fare",level:"B1",distractors:["refundable fare","flexible fare","changeable fare"]},
 {fr:"la montée en altitude",en:"climb",level:"B1",distractors:["ascent","cruise","descent"]},
 {fr:"la descente",en:"descent",level:"B1",distractors:["approach","landing","glide"]},
@@ -195,13 +194,11 @@ const VOCAB_AIRPORT=[
 {fr:"le plafond nuageux",en:"cloud ceiling",level:"B1",distractors:["cloud cover","visibility","cloud base"]},
 {fr:"le nettoyage de la cabine",en:"cabin cleaning",level:"B1",distractors:["cabin servicing","interior cleaning","aircraft cleaning"]},
 {fr:"l'indicatif d'appel",en:"call sign",level:"B1",distractors:["flight number","airline code","radio identifier"]},
-{fr:"le rapport météo METAR",en:"METAR report",level:"B1",distractors:["TAF forecast","weather bulletin","aviation weather report"]},
-{fr:"le service de restauration",en:"catering service",level:"B1",distractors:["meal service","food supply","inflight dining"]},
 {fr:"la rotation d'avion",en:"aircraft rotation",level:"B1",distractors:["plane rotation","rotation cycle","turnaround"]},
 {fr:"le système ALTEA",en:"ALTEA system",level:"B2",distractors:["Amadeus system","Sabre system","Galileo system"]},
-{fr:"le DCS (Departure Control System)",en:"Departure Control System",level:"B2",distractors:["Passenger Service System","Check-in System","Ground Operations System"]},
-{fr:"le PSS (Passenger Service System)",en:"Passenger Service System",level:"B2",distractors:["Departure Control System","Inventory System","Reservation System"]},
-{fr:"le GDS (Global Distribution System)",en:"Global Distribution System",level:"B2",distractors:["Computer Reservation System","Passenger Service System","Reservation System"]},
+{fr:"le DCS",en:"Departure Control System",level:"B2",distractors:["Passenger Service System","Check-in System","Ground Operations System"]},
+{fr:"le PSS",en:"Passenger Service System",level:"B2",distractors:["Departure Control System","Inventory System","Reservation System"]},
+{fr:"le GDS",en:"Global Distribution System",level:"B2",distractors:["Computer Reservation System","Passenger Service System","Reservation System"]},
 {fr:"la gestion du yield",en:"yield management",level:"B2",distractors:["revenue management","capacity management","price management"]},
 {fr:"la gestion des recettes",en:"revenue management",level:"B2",distractors:["yield management","pricing management","fare management"]},
 {fr:"la base tarifaire",en:"fare basis",level:"B2",distractors:["fare code","pricing code","ticket class"]},
@@ -222,7 +219,7 @@ const VOCAB_AIRPORT=[
 {fr:"la panne technique",en:"technical failure",level:"B2",distractors:["mechanical failure","system failure","equipment failure"]},
 {fr:"la maintenance préventive",en:"preventive maintenance",level:"B2",distractors:["corrective maintenance","scheduled maintenance","routine maintenance"]},
 {fr:"la maintenance corrective",en:"corrective maintenance",level:"B2",distractors:["preventive maintenance","emergency maintenance","unscheduled maintenance"]},
-{fr:"le MEL (liste d'équipement minimum)",en:"Minimum Equipment List",level:"B2",distractors:["aircraft configuration list","deferred defects list","maintenance checklist"]},
+{fr:"le MEL",en:"Minimum Equipment List",level:"B2",distractors:["aircraft configuration list","deferred defects list","maintenance checklist"]},
 {fr:"l'aptitude au vol",en:"airworthiness",level:"B2",distractors:["airworthiness certificate","flight readiness","aircraft condition"]},
 {fr:"le certificat de navigabilité",en:"certificate of airworthiness",level:"B2",distractors:["aircraft license","flight certificate","airworthiness document"]},
 {fr:"la visite avant vol",en:"pre-flight check",level:"B2",distractors:["walkaround check","daily check","exterior inspection"]},
@@ -231,7 +228,7 @@ const VOCAB_AIRPORT=[
 {fr:"l'EASA",en:"European Aviation Safety Agency",level:"B2",distractors:["ICAO","FAA","Eurocontrol"]},
 {fr:"la FAA",en:"Federal Aviation Administration",level:"B2",distractors:["EASA","ICAO","Transport Canada"]},
 {fr:"le chef d'escale",en:"station manager",level:"B2",distractors:["airport manager","operations manager","shift manager"]},
-{fr:"l'OTP (ponctualité)",en:"on-time performance",level:"B2",distractors:["schedule performance","delay performance","punctuality rate"]},
+{fr:"l'OTP",en:"on-time performance",level:"B2",distractors:["schedule performance","delay performance","punctuality rate"]},
 {fr:"le STD",en:"scheduled time of departure",level:"B2",distractors:["actual time of departure","estimated time of departure","departure time"]},
 {fr:"le STA",en:"scheduled time of arrival",level:"B2",distractors:["actual time of arrival","estimated time of arrival","arrival time"]},
 {fr:"l'ATD",en:"actual time of departure",level:"B2",distractors:["scheduled time of departure","estimated time of departure","off-block time"]},
@@ -275,35 +272,22 @@ const VOCAB_AIRPORT=[
 {fr:"la visite C",en:"C check",level:"B2",distractors:["A check","D check","major check"]},
 {fr:"la non-conformité",en:"non-compliance",level:"B2",distractors:["violation","infringement","regulatory breach"]},
 {fr:"le taux de ponctualité",en:"punctuality rate",level:"B2",distractors:["on-time rate","delay rate","schedule compliance"]},
-{fr:"le plan de vol opérationnel",en:"operational flight plan",level:"B2",distractors:["ATC flight plan","route plan","navigation plan"]},
 {fr:"la liste des passagers",en:"passenger list",level:"B2",distractors:["manifest","boarding list","flight roster"]},
-{fr:"le bordereau de chargement",en:"loading list",level:"B2",distractors:["cargo list","freight manifest","load document"]},
 {fr:"la déclaration générale",en:"general declaration",level:"B2",distractors:["customs declaration","crew declaration","flight declaration"]},
-{fr:"le rapport opérationnel",en:"operational report",level:"B2",distractors:["flight report","operations log","activity report"]},
 {fr:"l'accord interline",en:"interline agreement",level:"B2",distractors:["codeshare agreement","partnership agreement","alliance agreement"]},
-{fr:"la palette de fret",en:"freight pallet",level:"B2",distractors:["cargo container","loading unit","freight tray"]},
 {fr:"l'agent habilité",en:"regulated agent",level:"B2",distractors:["certified agent","authorized handler","security agent"]},
 {fr:"le chargeur connu",en:"known shipper",level:"B2",distractors:["regulated agent","trusted shipper","certified shipper"]},
 {fr:"la clairance ATC",en:"ATC clearance",level:"B2",distractors:["flight clearance","radar clearance","approach clearance"]},
-{fr:"le plan d'urgence",en:"contingency plan",level:"B2",distractors:["emergency plan","business continuity plan","crisis plan"]},
 {fr:"la gestion de crise",en:"crisis management",level:"B2",distractors:["disruption management","emergency management","incident management"]},
 {fr:"le coefficient de remplissage",en:"seat load factor",level:"B2",distractors:["occupancy rate","fill rate","capacity rate"]},
-{fr:"la recette par siège-kilomètre",en:"revenue per seat kilometre",level:"B2",distractors:["yield per seat","cost per seat","revenue per flight"]},
-{fr:"le coût par siège-kilomètre",en:"cost per seat kilometre",level:"B2",distractors:["revenue per seat","yield per km","operating cost per seat"]},
-{fr:"la marge opérationnelle",en:"operating margin",level:"B2",distractors:["profit margin","net margin","gross margin"]},
-{fr:"le brevet de pilote",en:"pilot licence",level:"B2",distractors:["type rating","pilot certificate","flight permit"]},
+{fr:"la brevet de pilote",en:"pilot licence",level:"B2",distractors:["type rating","pilot certificate","flight permit"]},
 {fr:"la qualification de type",en:"type rating",level:"B2",distractors:["aircraft rating","model endorsement","type approval"]},
 {fr:"le simulateur de vol",en:"flight simulator",level:"B2",distractors:["flight trainer","simulator device","training aircraft"]},
 {fr:"la fatigue de l'équipage",en:"crew fatigue",level:"B2",distractors:["pilot fatigue","staff fatigue","operational fatigue"]},
 {fr:"la réglementation FTL",en:"Flight Time Limitations",level:"B2",distractors:["duty time regulations","rest period rules","crew time limits"]},
 {fr:"le SOP",en:"Standard Operating Procedure",level:"B2",distractors:["Routine Operating Procedure","Normal Operating Procedure","Basic Operating Procedure"]},
 {fr:"la culture juste",en:"just culture",level:"B2",distractors:["fair culture","blame-free culture","safety culture"]},
-{fr:"le retour d'expérience",en:"lessons learned",level:"B2",distractors:["experience feedback","lessons feedback","operational learning"]},
-{fr:"l'audit opérationnel",en:"operational audit",level:"B2",distractors:["safety audit","quality audit","compliance audit"]},
-{fr:"le tableau de bord opérationnel",en:"operational dashboard",level:"B2",distractors:["KPI dashboard","management dashboard","performance board"]},
-{fr:"la régulation en vol",en:"in-flight regulation",level:"B2",distractors:["flight adjustment","airborne management","route control"]},
 {fr:"l'autorisation de survol",en:"overflight permit",level:"B2",distractors:["flight clearance","landing rights","transit rights"]},
-{fr:"le droit d'atterrissage",en:"landing rights",level:"B2",distractors:["traffic rights","air rights","overflight rights"]},
 {fr:"le A-CDM",en:"Airport Collaborative Decision Making",level:"C1",distractors:["Airport Coordination Management","Collaborative Flight Management","Airport Decision System"]},
 {fr:"la plateforme AODB",en:"Airport Operational Database",level:"C1",distractors:["Airport Information System","Flight Information System","Operations Database"]},
 {fr:"le DMAN",en:"Departure Manager",level:"C1",distractors:["Arrival Manager","Sequencing Tool","Departure Sequencer"]},
@@ -324,7 +308,6 @@ const VOCAB_AIRPORT=[
 {fr:"le MRO",en:"Maintenance Repair and Overhaul",level:"C1",distractors:["maintenance organisation","repair facility","aircraft workshop"]},
 {fr:"le retour en service",en:"return to service",level:"C1",distractors:["aircraft release","maintenance clearance","airworthiness sign-off"]},
 {fr:"le carnet de route",en:"technical log",level:"C1",distractors:["flight log","journey log","maintenance record"]},
-{fr:"l'inspection de ligne",en:"line maintenance",level:"C1",distractors:["line check","routine check","transit check"]},
 {fr:"le CRM",en:"Crew Resource Management",level:"C1",distractors:["Crew Relationship Management","Cockpit Resource Management","Command Resource Management"]},
 {fr:"le contrôle de compétences",en:"proficiency check",level:"C1",distractors:["skills test","competency assessment","line check"]},
 {fr:"la gestion des risques opérationnels",en:"operational risk management",level:"C1",distractors:["safety risk management","hazard management","risk mitigation"]},
@@ -346,7 +329,6 @@ const VOCAB_AIRPORT=[
 ];
 
 const VOCAB_GENERAL=[
-// A1
 {fr:"la tête",en:"head",level:"A1",distractors:["neck","face","skull"]},
 {fr:"le bras",en:"arm",level:"A1",distractors:["leg","hand","shoulder"]},
 {fr:"la jambe",en:"leg",level:"A1",distractors:["arm","foot","knee"]},
@@ -535,7 +517,6 @@ const VOCAB_GENERAL=[
 {fr:"la langue",en:"language",level:"A1",distractors:["tongue","dialect","speech"]},
 {fr:"le mot",en:"word",level:"A1",distractors:["phrase","term","expression"]},
 {fr:"la phrase",en:"sentence",level:"A1",distractors:["phrase","clause","paragraph"]},
-// A2
 {fr:"la douleur",en:"pain",level:"A2",distractors:["ache","hurt","discomfort"]},
 {fr:"la fièvre",en:"fever",level:"A2",distractors:["cold","flu","cough"]},
 {fr:"le rhume",en:"cold",level:"A2",distractors:["flu","fever","cough"]},
@@ -717,7 +698,6 @@ const VOCAB_GENERAL=[
 {fr:"économiser",en:"to save",level:"A2",distractors:["to keep","to store","to preserve"]},
 {fr:"emprunter",en:"to borrow",level:"A2",distractors:["to lend","to take","to rent"]},
 {fr:"prêter",en:"to lend",level:"A2",distractors:["to borrow","to give","to share"]},
-// B1
 {fr:"le chirurgien",en:"surgeon",level:"B1",distractors:["doctor","specialist","consultant"]},
 {fr:"l'opération",en:"operation",level:"B1",distractors:["surgery","procedure","treatment"]},
 {fr:"l'urgence",en:"emergency",level:"B1",distractors:["crisis","accident","incident"]},
@@ -865,7 +845,6 @@ const VOCAB_GENERAL=[
 {fr:"le principe",en:"principle",level:"B1",distractors:["rule","value","standard"]},
 {fr:"la valeur",en:"value",level:"B1",distractors:["principle","worth","importance"]},
 {fr:"la norme",en:"norm",level:"B1",distractors:["standard","rule","convention"]},
-// B2
 {fr:"la mondialisation",en:"globalisation",level:"B2",distractors:["internationalisation","liberalisation","integration"]},
 {fr:"le libre-échange",en:"free trade",level:"B2",distractors:["open market","trade liberalisation","free market"]},
 {fr:"le protectionnisme",en:"protectionism",level:"B2",distractors:["trade barrier","tariff","import restriction"]},
@@ -948,38 +927,26 @@ const VOCAB_GENERAL=[
 {fr:"la disruption",en:"disruption",level:"B2",distractors:["disturbance","breakthrough","transformation"]},
 {fr:"l'agilité",en:"agility",level:"B2",distractors:["flexibility","adaptability","responsiveness"]},
 {fr:"la traçabilité",en:"traceability",level:"B2",distractors:["tracking","monitoring","transparency"]},
-{fr:"la performance durable",en:"sustainable performance",level:"B2",distractors:["long-term performance","green performance","eco performance"]},
 {fr:"le capital humain",en:"human capital",level:"B2",distractors:["workforce","talent pool","staff resources"]},
 {fr:"l'avantage compétitif",en:"competitive advantage",level:"B2",distractors:["market edge","strategic advantage","competitive edge"]},
 {fr:"la chaîne de valeur",en:"value chain",level:"B2",distractors:["supply chain","production chain","business chain"]},
-{fr:"la stratégie d'entreprise",en:"corporate strategy",level:"B2",distractors:["business plan","corporate plan","management strategy"]},
 {fr:"le modèle économique",en:"business model",level:"B2",distractors:["revenue model","operating model","business strategy"]},
 {fr:"la satisfaction client",en:"customer satisfaction",level:"B2",distractors:["client happiness","customer approval","service satisfaction"]},
-{fr:"la fidélisation client",en:"customer retention",level:"B2",distractors:["client loyalty","customer loyalty","retention strategy"]},
 {fr:"la segmentation du marché",en:"market segmentation",level:"B2",distractors:["market division","audience segmentation","market split"]},
-{fr:"le positionnement",en:"positioning",level:"B2",distractors:["placement","branding","differentiation"]},
-{fr:"la disruption technologique",en:"technological disruption",level:"B2",distractors:["tech breakthrough","digital disruption","innovation shock"]},
 {fr:"la transformation numérique",en:"digital transformation",level:"B2",distractors:["digitisation","digital change","technology shift"]},
 {fr:"l'expérience utilisateur",en:"user experience",level:"B2",distractors:["customer experience","interface design","UX design"]},
-{fr:"l'innovation de rupture",en:"disruptive innovation",level:"B2",distractors:["breakthrough innovation","radical innovation","game-changing innovation"]},
-{fr:"la veille concurrentielle",en:"competitive intelligence",level:"B2",distractors:["market watch","competitor analysis","market intelligence"]},
-{fr:"le benchmarking",en:"benchmarking",level:"B2",distractors:["performance comparison","best practice analysis","competitive benchmarking"]},
 {fr:"la gestion des risques",en:"risk management",level:"B2",distractors:["risk control","hazard management","risk mitigation"]},
 {fr:"la conformité réglementaire",en:"regulatory compliance",level:"B2",distractors:["legal compliance","rule compliance","statutory compliance"]},
-{fr:"la due diligence",en:"due diligence",level:"B2",distractors:["background check","risk assessment","audit"]},
 {fr:"le retour sur investissement",en:"return on investment",level:"B2",distractors:["ROI","profit margin","capital return"]},
 {fr:"la trésorerie",en:"cash flow",level:"B2",distractors:["liquidity","funds","working capital"]},
 {fr:"le bilan comptable",en:"balance sheet",level:"B2",distractors:["income statement","cash flow statement","financial report"]},
 {fr:"l'amortissement",en:"depreciation",level:"B2",distractors:["amortisation","write-off","reduction in value"]},
-{fr:"l'audit financier",en:"financial audit",level:"B2",distractors:["operational audit","compliance audit","tax audit"]},
 {fr:"la marge brute",en:"gross margin",level:"B2",distractors:["net margin","operating margin","profit margin"]},
-{fr:"la masse salariale",en:"payroll",level:"B2",distractors:["salary costs","staff costs","wage bill"]},
 {fr:"le chiffre d'affaires",en:"turnover",level:"B2",distractors:["revenue","income","sales figure"]},
 {fr:"la dette souveraine",en:"sovereign debt",level:"B2",distractors:["national debt","public debt","government debt"]},
 {fr:"l'austérité",en:"austerity",level:"B2",distractors:["budget cuts","frugality","fiscal tightening"]},
 {fr:"le déficit budgétaire",en:"budget deficit",level:"B2",distractors:["fiscal deficit","spending deficit","financial gap"]},
 {fr:"la relance économique",en:"economic stimulus",level:"B2",distractors:["economic recovery","fiscal stimulus","economic boost"]},
-{fr:"le plan de restructuration",en:"restructuring plan",level:"B2",distractors:["reorganisation plan","reform plan","turnaround plan"]},
 {fr:"la délocalisation",en:"offshoring",level:"B2",distractors:["outsourcing","relocation","nearshoring"]},
 {fr:"la sous-traitance",en:"outsourcing",level:"B2",distractors:["offshoring","contracting out","third-party services"]},
 {fr:"le lobbying",en:"lobbying",level:"B2",distractors:["advocacy","pressure group","political influence"]},
@@ -990,13 +957,10 @@ const VOCAB_GENERAL=[
 {fr:"la séparation des pouvoirs",en:"separation of powers",level:"B2",distractors:["checks and balances","rule of law","constitutional balance"]},
 {fr:"l'État de droit",en:"rule of law",level:"B2",distractors:["constitutional state","legal order","judicial independence"]},
 {fr:"le référendum",en:"referendum",level:"B2",distractors:["plebiscite","poll","vote"]},
-{fr:"le traité de paix",en:"peace treaty",level:"B2",distractors:["ceasefire","armistice","peace agreement"]},
 {fr:"les sanctions économiques",en:"economic sanctions",level:"B2",distractors:["trade sanctions","financial sanctions","diplomatic sanctions"]},
 {fr:"la géopolitique",en:"geopolitics",level:"B2",distractors:["international relations","realpolitik","power politics"]},
-// C1
 {fr:"la déréglementation",en:"deregulation",level:"C1",distractors:["liberalisation","reform","privatisation"]},
 {fr:"la privatisation",en:"privatisation",level:"C1",distractors:["nationalisation","commercialisation","deregulation"]},
-{fr:"le quantitative easing",en:"quantitative easing",level:"C1",distractors:["monetary stimulus","bond buying","asset purchase programme"]},
 {fr:"le risque systémique",en:"systemic risk",level:"C1",distractors:["financial risk","contagion risk","market risk"]},
 {fr:"le capital-risque",en:"venture capital",level:"C1",distractors:["private equity","angel investment","seed funding"]},
 {fr:"l'aléa moral",en:"moral hazard",level:"C1",distractors:["adverse selection","information asymmetry","principal-agent problem"]},
@@ -1014,8 +978,6 @@ const VOCAB_GENERAL=[
 {fr:"la revue par les pairs",en:"peer review",level:"C1",distractors:["expert review","editorial review","blind review"]},
 {fr:"le biais de confirmation",en:"confirmation bias",level:"C1",distractors:["selection bias","cognitive bias","anchoring"]},
 {fr:"la mécanique quantique",en:"quantum mechanics",level:"C1",distractors:["quantum physics","particle physics","theoretical physics"]},
-{fr:"le CRISPR",en:"CRISPR",level:"C1",distractors:["gene editing","genome sequencing","PCR"]},
-{fr:"la neuroscience cognitive",en:"cognitive neuroscience",level:"C1",distractors:["behavioural neuroscience","neuropsychology","cognitive psychology"]},
 {fr:"la capture de carbone",en:"carbon capture",level:"C1",distractors:["carbon storage","CCS","carbon sequestration"]},
 {fr:"l'adaptation climatique",en:"climate adaptation",level:"C1",distractors:["climate resilience","climate mitigation","adjustment"]},
 {fr:"l'acidification des océans",en:"ocean acidification",level:"C1",distractors:["ocean warming","pH change","marine pollution"]},
@@ -1036,7 +998,6 @@ const VOCAB_GENERAL=[
 {fr:"la chaîne d'approvisionnement",en:"supply chain",level:"C1",distractors:["value chain","logistics chain","procurement chain"]},
 {fr:"l'économie d'échelle",en:"economy of scale",level:"C1",distractors:["scale efficiency","cost reduction","volume benefit"]},
 {fr:"le seuil de rentabilité",en:"break-even point",level:"C1",distractors:["profit threshold","cost recovery point","viability threshold"]},
-// C2
 {fr:"la théorie des jeux",en:"game theory",level:"C2",distractors:["decision theory","utility theory","rational choice theory"]},
 {fr:"l'équilibre de Nash",en:"Nash equilibrium",level:"C2",distractors:["Pareto optimum","dominant strategy","prisoner's dilemma"]},
 {fr:"le dilemme du prisonnier",en:"prisoner's dilemma",level:"C2",distractors:["Nash equilibrium","collective action problem","coordination game"]},
@@ -1046,7 +1007,6 @@ const VOCAB_GENERAL=[
 {fr:"le néolibéralisme",en:"neoliberalism",level:"C2",distractors:["ordoliberalism","social liberalism","libertarianism"]},
 {fr:"la destruction créatrice",en:"creative destruction",level:"C2",distractors:["disruptive innovation","technological change","market disruption"]},
 {fr:"la rationalité limitée",en:"bounded rationality",level:"C2",distractors:["rational behaviour","limited cognition","satisficing"]},
-{fr:"le réductionnisme",en:"reductionism",level:"C2",distractors:["holism","emergentism","systems thinking"]},
 {fr:"l'entropie",en:"entropy",level:"C2",distractors:["energy dissipation","disorder","thermodynamic arrow"]},
 {fr:"la superposition quantique",en:"quantum superposition",level:"C2",distractors:["quantum entanglement","wave-particle duality","quantum tunnelling"]},
 {fr:"l'intrication quantique",en:"quantum entanglement",level:"C2",distractors:["quantum superposition","spooky action","quantum correlation"]},
@@ -1057,12 +1017,9 @@ const VOCAB_GENERAL=[
 {fr:"le voile d'ignorance",en:"veil of ignorance",level:"C2",distractors:["original position","hypothetical contract","Rawlsian fairness"]},
 {fr:"le nihilisme moral",en:"moral nihilism",level:"C2",distractors:["moral relativism","error theory","anti-realism"]},
 {fr:"la responsabilité de protéger",en:"responsibility to protect",level:"C2",distractors:["humanitarian intervention","state responsibility","R2P"]},
-{fr:"la compétence universelle",en:"universal jurisdiction",level:"C2",distractors:["territorial jurisdiction","international jurisdiction","extraterritorial jurisdiction"]},
-{fr:"le génocide",en:"genocide",level:"C2",distractors:["ethnic cleansing","war crime","crime against humanity"]},
 {fr:"la guerre hybride",en:"hybrid warfare",level:"C2",distractors:["asymmetric warfare","proxy war","irregular warfare"]},
 {fr:"l'intersectionnalité",en:"intersectionality",level:"C2",distractors:["identity politics","social stratification","positionality"]},
 {fr:"le capital culturel",en:"cultural capital",level:"C2",distractors:["social capital","economic capital","symbolic capital"]},
-{fr:"l'habitus",en:"habitus",level:"C2",distractors:["field","capital","disposition"]},
 {fr:"l'hégémonie culturelle",en:"cultural hegemony",level:"C2",distractors:["cultural domination","soft power","ideological dominance"]},
 {fr:"l'anthropocène",en:"Anthropocene",level:"C2",distractors:["Holocene","Capitalocene","geological epoch"]},
 {fr:"l'économie de plateforme",en:"platform economy",level:"C2",distractors:["gig economy","sharing economy","digital economy"]},
@@ -1102,11 +1059,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would be",you:"would be","he/she":"would be",we:"would be",they:"would be"},fr:{I:"je serais",you:"tu serais","he/she":"il/elle serait",we:"nous serions",they:"ils seraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ very tired today.",fr:FS[s]+" ___ très fatigué(e) aujourd'hui."}),
-      (s)=>({en:s+" ___ at school right now.",fr:FS[s]+" ___ à l'école en ce moment."}),
-      (s)=>({en:s+" ___ late for the meeting.",fr:FS[s]+" ___ en retard pour la réunion."}),
-      (s)=>({en:s+" ___ happy when I called.",fr:FS[s]+" ___ content(e) quand j'ai appelé."}),
-      (s)=>({en:s+" ___ ready to leave.",fr:FS[s]+" ___ prêt(e) à partir."}),
+      (s)=>({en:s+" ___ very tired today.",fr:FS[s]+" [FR] très fatigué(e) aujourd'hui."}),
+      (s)=>({en:s+" ___ at school right now.",fr:FS[s]+" [FR] à l'école en ce moment."}),
+      (s)=>({en:s+" ___ late for the meeting.",fr:FS[s]+" [FR] en retard pour la réunion."}),
+      (s)=>({en:s+" ___ happy when I called.",fr:FS[s]+" [FR] content(e) quand j'ai appelé."}),
+      (s)=>({en:s+" ___ ready to leave.",fr:FS[s]+" [FR] prêt(e) à partir."}),
+      (s)=>({en:s+" ___ sick for three days.",fr:FS[s]+" [FR] malade pendant trois jours."}),
+      (s)=>({en:s+" ___ the best in the class.",fr:FS[s]+" [FR] le/la meilleur(e) de la classe."}),
+      (s)=>({en:s+" ___ in Paris last summer.",fr:FS[s]+" [FR] à Paris l'été dernier."}),
     ]
   },
   have:{label:"HAVE",fr:"avoir",emoji:"🟢",color:"#00d9a3",
@@ -1119,11 +1079,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would have",you:"would have","he/she":"would have",we:"would have",they:"would have"},fr:{I:"j'aurais",you:"tu aurais","he/she":"il/elle aurait",we:"nous aurions",they:"ils auraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ a meeting this afternoon.",fr:FS[s]+" ___ une réunion cet après-midi."}),
-      (s)=>({en:s+" ___ no idea where to go.",fr:FS[s]+" ___ aucune idée où aller."}),
-      (s)=>({en:s+" ___ enough time to finish.",fr:FS[s]+" ___ assez de temps pour finir."}),
-      (s)=>({en:s+" ___ a headache all morning.",fr:FS[s]+" ___ mal à la tête toute la matinée."}),
-      (s)=>({en:s+" ___ an appointment at 3pm.",fr:FS[s]+" ___ un rendez-vous à 15h."}),
+      (s)=>({en:s+" ___ a meeting this afternoon.",fr:FS[s]+" [FR] une réunion cet après-midi."}),
+      (s)=>({en:s+" ___ no idea where to go.",fr:FS[s]+" [FR] aucune idée où aller."}),
+      (s)=>({en:s+" ___ enough time to finish.",fr:FS[s]+" [FR] assez de temps pour finir."}),
+      (s)=>({en:s+" ___ a headache all morning.",fr:FS[s]+" [FR] mal à la tête toute la matinée."}),
+      (s)=>({en:s+" ___ an appointment at 3pm.",fr:FS[s]+" [FR] un rendez-vous à 15h."}),
+      (s)=>({en:s+" ___ breakfast before leaving.",fr:FS[s]+" [FR] pris le petit-déjeuner avant de partir."}),
+      (s)=>({en:s+" ___ a great time at the party.",fr:FS[s]+" [FR] passé un excellent moment à la fête."}),
+      (s)=>({en:s+" ___ this phone for two years.",fr:FS[s]+" [FR] ce téléphone depuis deux ans."}),
     ]
   },
   do:{label:"DO",fr:"faire",emoji:"🟡",color:"#ffd93d",
@@ -1136,11 +1099,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would do",you:"would do","he/she":"would do",we:"would do",they:"would do"},fr:{I:"je ferais",you:"tu ferais","he/she":"il/elle ferait",we:"nous ferions",they:"ils feraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ the homework every evening.",fr:FS[s]+" ___ les devoirs chaque soir."}),
-      (s)=>({en:s+" ___ the cooking in our house.",fr:FS[s]+" ___ la cuisine chez nous."}),
-      (s)=>({en:s+" ___ sport three times a week.",fr:FS[s]+" ___ du sport trois fois par semaine."}),
-      (s)=>({en:s+" ___ research on this topic.",fr:FS[s]+" ___ des recherches sur ce sujet."}),
-      (s)=>({en:s+" ___ well in the English test.",fr:FS[s]+" ___ bien au test d'anglais."}),
+      (s)=>({en:s+" ___ the homework every evening.",fr:FS[s]+" [FR] les devoirs chaque soir."}),
+      (s)=>({en:s+" ___ the cooking in our house.",fr:FS[s]+" [FR] la cuisine chez nous."}),
+      (s)=>({en:s+" ___ sport three times a week.",fr:FS[s]+" [FR] du sport trois fois par semaine."}),
+      (s)=>({en:s+" ___ research on this topic.",fr:FS[s]+" [FR] des recherches sur ce sujet."}),
+      (s)=>({en:s+" ___ well in the English test.",fr:FS[s]+" [FR] bien au test d'anglais."}),
+      (s)=>({en:s+" ___ everything possible to help.",fr:FS[s]+" [FR] tout son possible pour aider."}),
+      (s)=>({en:s+" ___ the dishes after dinner.",fr:FS[s]+" [FR] la vaisselle après le dîner."}),
+      (s)=>({en:s+" ___ a good job on that project.",fr:FS[s]+" [FR] du bon travail sur ce projet."}),
     ]
   },
   go:{label:"GO",fr:"aller",emoji:"🟠",color:"#ff9f43",
@@ -1153,11 +1119,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would go",you:"would go","he/she":"would go",we:"would go",they:"would go"},fr:{I:"j'irais",you:"tu irais","he/she":"il/elle irait",we:"nous irions",they:"ils iraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ to school every morning.",fr:FS[s]+" ___ à l'école chaque matin."}),
-      (s)=>({en:s+" ___ to bed very late last night.",fr:FS[s]+" ___ se coucher très tard hier soir."}),
-      (s)=>({en:s+" ___ to the cinema last Friday.",fr:FS[s]+" ___ au cinéma vendredi dernier."}),
-      (s)=>({en:s+" ___ on holiday in July.",fr:FS[s]+" ___ en vacances en juillet."}),
-      (s)=>({en:s+" ___ to work by train.",fr:FS[s]+" ___ au travail en train."}),
+      (s)=>({en:s+" ___ to school every morning.",fr:FS[s]+" [FR] à l'école chaque matin."}),
+      (s)=>({en:s+" ___ to bed very late last night.",fr:FS[s]+" [FR] se coucher très tard hier soir."}),
+      (s)=>({en:s+" ___ to the cinema last Friday.",fr:FS[s]+" [FR] au cinéma vendredi dernier."}),
+      (s)=>({en:s+" ___ on holiday in July.",fr:FS[s]+" [FR] en vacances en juillet."}),
+      (s)=>({en:s+" ___ to work by train.",fr:FS[s]+" [FR] au travail en train."}),
+      (s)=>({en:s+" ___ to the doctor yesterday.",fr:FS[s]+" [FR] chez le médecin hier."}),
+      (s)=>({en:s+" ___ abroad next summer.",fr:FS[s]+" [FR] à l'étranger l'été prochain."}),
+      (s)=>({en:s+" ___ for a walk every evening.",fr:FS[s]+" [FR] se promener chaque soir."}),
     ]
   },
   make:{label:"MAKE",fr:"faire/créer",emoji:"🔴",color:"#ff6584",
@@ -1170,11 +1139,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would make",you:"would make","he/she":"would make",we:"would make",they:"would make"},fr:{I:"je ferais",you:"tu ferais","he/she":"il/elle ferait",we:"nous ferions",they:"ils feraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ coffee for everyone.",fr:FS[s]+" ___ du café pour tout le monde."}),
-      (s)=>({en:s+" ___ a decision very quickly.",fr:FS[s]+" ___ une décision très rapidement."}),
-      (s)=>({en:s+" ___ a good impression on the boss.",fr:FS[s]+" ___ une bonne impression sur le patron."}),
-      (s)=>({en:s+" ___ a big effort to succeed.",fr:FS[s]+" ___ un grand effort pour réussir."}),
-      (s)=>({en:s+" ___ progress very quickly.",fr:FS[s]+" ___ des progrès très rapidement."}),
+      (s)=>({en:s+" ___ coffee for everyone.",fr:FS[s]+" [FR] du café pour tout le monde."}),
+      (s)=>({en:s+" ___ a decision very quickly.",fr:FS[s]+" [FR] une décision très rapidement."}),
+      (s)=>({en:s+" ___ a good impression on the boss.",fr:FS[s]+" [FR] une bonne impression sur le patron."}),
+      (s)=>({en:s+" ___ a big effort to succeed.",fr:FS[s]+" [FR] un grand effort pour réussir."}),
+      (s)=>({en:s+" ___ progress very quickly.",fr:FS[s]+" [FR] des progrès très rapidement."}),
+      (s)=>({en:s+" ___ a lot of mistakes.",fr:FS[s]+" [FR] beaucoup d'erreurs."}),
+      (s)=>({en:s+" ___ dinner for the whole family.",fr:FS[s]+" [FR] le dîner pour toute la famille."}),
+      (s)=>({en:s+" ___ a promise and kept it.",fr:FS[s]+" [FR] une promesse et l'a tenue."}),
     ]
   },
   take:{label:"TAKE",fr:"prendre",emoji:"🟣",color:"#a855f7",
@@ -1187,11 +1159,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would take",you:"would take","he/she":"would take",we:"would take",they:"would take"},fr:{I:"je prendrais",you:"tu prendrais","he/she":"il/elle prendrait",we:"nous prendrions",they:"ils prendraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ the bus to work.",fr:FS[s]+" ___ le bus pour aller au travail."}),
-      (s)=>({en:s+" ___ a shower every morning.",fr:FS[s]+" ___ une douche chaque matin."}),
-      (s)=>({en:s+" ___ the train to Paris.",fr:FS[s]+" ___ le train pour Paris."}),
-      (s)=>({en:s+" ___ good care of the children.",fr:FS[s]+" ___ bien soin des enfants."}),
-      (s)=>({en:s+" ___ a nap after lunch.",fr:FS[s]+" ___ une sieste après le déjeuner."}),
+      (s)=>({en:s+" ___ the bus to work.",fr:FS[s]+" [FR] le bus pour aller au travail."}),
+      (s)=>({en:s+" ___ a shower every morning.",fr:FS[s]+" [FR] une douche chaque matin."}),
+      (s)=>({en:s+" ___ the train to Paris.",fr:FS[s]+" [FR] le train pour Paris."}),
+      (s)=>({en:s+" ___ good care of the children.",fr:FS[s]+" [FR] bien soin des enfants."}),
+      (s)=>({en:s+" ___ a nap after lunch.",fr:FS[s]+" [FR] une sieste après le déjeuner."}),
+      (s)=>({en:s+" ___ a photo of the sunset.",fr:FS[s]+" [FR] une photo du coucher de soleil."}),
+      (s)=>({en:s+" ___ medicine twice a day.",fr:FS[s]+" [FR] des médicaments deux fois par jour."}),
+      (s)=>({en:s+" ___ the wrong road.",fr:FS[s]+" [FR] la mauvaise route."}),
     ]
   },
   get:{label:"GET",fr:"obtenir/devenir",emoji:"⚪",color:"#b2bec3",
@@ -1204,11 +1179,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would get",you:"would get","he/she":"would get",we:"would get",they:"would get"},fr:{I:"j'obtiendrais",you:"tu obtiendrais","he/she":"il/elle obtiendrait",we:"nous obtiendrions",they:"ils obtiendraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ a letter from the bank.",fr:FS[s]+" ___ une lettre de la banque."}),
-      (s)=>({en:s+" ___ tired very quickly.",fr:FS[s]+" ___ fatigué(e) très rapidement."}),
-      (s)=>({en:s+" ___ a good grade on the exam.",fr:FS[s]+" ___ une bonne note à l'examen."}),
-      (s)=>({en:s+" ___ ready before everyone else.",fr:FS[s]+" ___ prêt(e) avant tout le monde."}),
-      (s)=>({en:s+" ___ lost in the city centre.",fr:FS[s]+" ___ perdu(e) dans le centre-ville."}),
+      (s)=>({en:s+" ___ a letter from the bank.",fr:FS[s]+" [FR] une lettre de la banque."}),
+      (s)=>({en:s+" ___ tired very quickly.",fr:FS[s]+" [FR] fatigué(e) très rapidement."}),
+      (s)=>({en:s+" ___ a good grade on the exam.",fr:FS[s]+" [FR] une bonne note à l'examen."}),
+      (s)=>({en:s+" ___ ready before everyone else.",fr:FS[s]+" [FR] prêt(e) avant tout le monde."}),
+      (s)=>({en:s+" ___ lost in the city centre.",fr:FS[s]+" [FR] perdu(e) dans le centre-ville."}),
+      (s)=>({en:s+" ___ home at midnight.",fr:FS[s]+" [FR] rentré(e) chez moi à minuit."}),
+      (s)=>({en:s+" ___ better at English every day.",fr:FS[s]+" [FR] de mieux en mieux en anglais chaque jour."}),
+      (s)=>({en:s+" ___ a new job last month.",fr:FS[s]+" [FR] un nouvel emploi le mois dernier."}),
     ]
   },
   give:{label:"GIVE",fr:"donner",emoji:"🩷",color:"#fd79a8",
@@ -1221,11 +1199,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would give",you:"would give","he/she":"would give",we:"would give",they:"would give"},fr:{I:"je donnerais",you:"tu donnerais","he/she":"il/elle donnerait",we:"nous donnerions",they:"ils donneraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ a present to her friend.",fr:FS[s]+" ___ un cadeau à son amie."}),
-      (s)=>({en:s+" ___ good advice to everyone.",fr:FS[s]+" ___ de bons conseils à tout le monde."}),
-      (s)=>({en:s+" ___ a speech at the conference.",fr:FS[s]+" ___ un discours à la conférence."}),
-      (s)=>({en:s+" ___ permission to leave early.",fr:FS[s]+" ___ la permission de partir tôt."}),
-      (s)=>({en:s+" ___ a chance to prove himself.",fr:FS[s]+" ___ une chance de faire ses preuves."}),
+      (s)=>({en:s+" ___ a present to her friend.",fr:FS[s]+" [FR] un cadeau à son amie."}),
+      (s)=>({en:s+" ___ good advice to everyone.",fr:FS[s]+" [FR] de bons conseils à tout le monde."}),
+      (s)=>({en:s+" ___ a speech at the conference.",fr:FS[s]+" [FR] un discours à la conférence."}),
+      (s)=>({en:s+" ___ permission to leave early.",fr:FS[s]+" [FR] la permission de partir tôt."}),
+      (s)=>({en:s+" ___ a chance to prove himself.",fr:FS[s]+" [FR] une chance de faire ses preuves."}),
+      (s)=>({en:s+" ___ money to charity every month.",fr:FS[s]+" [FR] de l'argent à une association chaque mois."}),
+      (s)=>({en:s+" ___ feedback after every lesson.",fr:FS[s]+" [FR] un retour après chaque leçon."}),
+      (s)=>({en:s+" ___ a hug to her daughter.",fr:FS[s]+" [FR] un câlin à sa fille."}),
     ]
   },
   know:{label:"KNOW",fr:"savoir/connaître",emoji:"🧠",color:"#00cec9",
@@ -1238,11 +1219,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would know",you:"would know","he/she":"would know",we:"would know",they:"would know"},fr:{I:"je saurais",you:"tu saurais","he/she":"il/elle saurait",we:"nous saurions",they:"ils sauraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ the answer to every question.",fr:FS[s]+" ___ la réponse à chaque question."}),
-      (s)=>({en:s+" ___ this city very well.",fr:FS[s]+" ___ très bien cette ville."}),
-      (s)=>({en:s+" ___ exactly what to do.",fr:FS[s]+" ___ exactement quoi faire."}),
-      (s)=>({en:s+" ___ the truth all along.",fr:FS[s]+" ___ la vérité depuis le début."}),
-      (s)=>({en:s+" ___ the way to the station.",fr:FS[s]+" ___ le chemin de la gare."}),
+      (s)=>({en:s+" ___ the answer to every question.",fr:FS[s]+" [FR] la réponse à chaque question."}),
+      (s)=>({en:s+" ___ this city very well.",fr:FS[s]+" [FR] très bien cette ville."}),
+      (s)=>({en:s+" ___ exactly what to do.",fr:FS[s]+" [FR] exactement quoi faire."}),
+      (s)=>({en:s+" ___ the truth all along.",fr:FS[s]+" [FR] la vérité depuis le début."}),
+      (s)=>({en:s+" ___ the way to the station.",fr:FS[s]+" [FR] le chemin de la gare."}),
+      (s)=>({en:s+" ___ how to speak three languages.",fr:FS[s]+" [FR] parler trois langues."}),
+      (s)=>({en:s+" ___ nothing about computers.",fr:FS[s]+" [FR] rien aux ordinateurs."}),
+      (s)=>({en:s+" ___ the result before anyone else.",fr:FS[s]+" [FR] le résultat avant tout le monde."}),
     ]
   },
   think:{label:"THINK",fr:"penser",emoji:"💭",color:"#74b9ff",
@@ -1255,11 +1239,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would think",you:"would think","he/she":"would think",we:"would think",they:"would think"},fr:{I:"je penserais",you:"tu penserais","he/she":"il/elle penserait",we:"nous penserions",they:"ils penseraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ about her all the time.",fr:FS[s]+" ___ à elle tout le temps."}),
-      (s)=>({en:s+" ___ this is a great idea.",fr:FS[s]+" ___ que c'est une excellente idée."}),
-      (s)=>({en:s+" ___ carefully before answering.",fr:FS[s]+" ___ attentivement avant de répondre."}),
-      (s)=>({en:s+" ___ she was right all along.",fr:FS[s]+" ___ qu'elle avait raison depuis le début."}),
-      (s)=>({en:s+" ___ about changing jobs.",fr:FS[s]+" ___ à changer de travail."}),
+      (s)=>({en:s+" ___ about her all the time.",fr:FS[s]+" [FR] à elle tout le temps."}),
+      (s)=>({en:s+" ___ this is a great idea.",fr:FS[s]+" [FR] que c'est une excellente idée."}),
+      (s)=>({en:s+" ___ carefully before answering.",fr:FS[s]+" [FR] attentivement avant de répondre."}),
+      (s)=>({en:s+" ___ she was right all along.",fr:FS[s]+" [FR] qu'elle avait raison depuis le début."}),
+      (s)=>({en:s+" ___ about changing jobs.",fr:FS[s]+" [FR] à changer de travail."}),
+      (s)=>({en:s+" ___ the same thing as me.",fr:FS[s]+" [FR] la même chose que moi."}),
+      (s)=>({en:s+" ___ twice before making a decision.",fr:FS[s]+" [FR] à deux fois avant de prendre une décision."}),
+      (s)=>({en:s+" ___ positively about the future.",fr:FS[s]+" [FR] positivement à l'avenir."}),
     ]
   },
   come:{label:"COME",fr:"venir",emoji:"🏃",color:"#55efc4",
@@ -1272,11 +1259,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would come",you:"would come","he/she":"would come",we:"would come",they:"would come"},fr:{I:"je viendrais",you:"tu viendrais","he/she":"il/elle viendrait",we:"nous viendrions",they:"ils viendraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ to my birthday party.",fr:FS[s]+" ___ à ma fête d'anniversaire."}),
-      (s)=>({en:s+" ___ from a small town in France.",fr:FS[s]+" ___ d'une petite ville en France."}),
-      (s)=>({en:s+" ___ back from holiday yesterday.",fr:FS[s]+" ___ rentré(e) de vacances hier."}),
-      (s)=>({en:s+" ___ to the meeting every week.",fr:FS[s]+" ___ à la réunion chaque semaine."}),
-      (s)=>({en:s+" ___ to the airport to pick me up.",fr:FS[s]+" ___ à l'aéroport me chercher."}),
+      (s)=>({en:s+" ___ to my birthday party.",fr:FS[s]+" [FR] à ma fête d'anniversaire."}),
+      (s)=>({en:s+" ___ from a small town in France.",fr:FS[s]+" [FR] d'une petite ville en France."}),
+      (s)=>({en:s+" ___ back from holiday yesterday.",fr:FS[s]+" [FR] rentré(e) de vacances hier."}),
+      (s)=>({en:s+" ___ to the meeting every week.",fr:FS[s]+" [FR] à la réunion chaque semaine."}),
+      (s)=>({en:s+" ___ to the airport to pick me up.",fr:FS[s]+" [FR] à l'aéroport me chercher."}),
+      (s)=>({en:s+" ___ home very late every night.",fr:FS[s]+" [FR] très tard chez moi chaque soir."}),
+      (s)=>({en:s+" ___ first in the race.",fr:FS[s]+" [FR] premier(ère) dans la course."}),
+      (s)=>({en:s+" ___ early to help prepare.",fr:FS[s]+" [FR] tôt pour aider à préparer."}),
     ]
   },
   see:{label:"SEE",fr:"voir",emoji:"👁️",color:"#fdcb6e",
@@ -1289,11 +1279,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would see",you:"would see","he/she":"would see",we:"would see",they:"would see"},fr:{I:"je verrais",you:"tu verrais","he/she":"il/elle verrait",we:"nous verrions",they:"ils verraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ a great film last night.",fr:FS[s]+" ___ un très bon film hier soir."}),
-      (s)=>({en:s+" ___ the doctor twice a year.",fr:FS[s]+" ___ le médecin deux fois par an."}),
-      (s)=>({en:s+" ___ the problem straight away.",fr:FS[s]+" ___ le problème immédiatement."}),
-      (s)=>({en:s+" ___ many changes in this city.",fr:FS[s]+" ___ beaucoup de changements dans cette ville."}),
-      (s)=>({en:s+" ___ the results very soon.",fr:FS[s]+" ___ les résultats très bientôt."}),
+      (s)=>({en:s+" ___ a great film last night.",fr:FS[s]+" [FR] un très bon film hier soir."}),
+      (s)=>({en:s+" ___ the doctor twice a year.",fr:FS[s]+" [FR] le médecin deux fois par an."}),
+      (s)=>({en:s+" ___ the problem straight away.",fr:FS[s]+" [FR] le problème immédiatement."}),
+      (s)=>({en:s+" ___ many changes in this city.",fr:FS[s]+" [FR] beaucoup de changements dans cette ville."}),
+      (s)=>({en:s+" ___ the results very soon.",fr:FS[s]+" [FR] les résultats très bientôt."}),
+      (s)=>({en:s+" ___ her every day at work.",fr:FS[s]+" [FR] la/le voir chaque jour au travail."}),
+      (s)=>({en:s+" ___ a rainbow after the rain.",fr:FS[s]+" [FR] un arc-en-ciel après la pluie."}),
+      (s)=>({en:s+" ___ this coming from miles away.",fr:FS[s]+" [FR] ça venir de loin."}),
     ]
   },
   must:{label:"MUST/HAVE TO",fr:"devoir",emoji:"⚡",color:"#e17055",
@@ -1306,11 +1299,14 @@ const VERB_DATA={
       "Passé (should have)":{level:"B2",en:{I:"should have",you:"should have","he/she":"should have",we:"should have",they:"should have"},fr:{I:"j'aurais dû",you:"tu aurais dû","he/she":"il/elle aurait dû",we:"nous aurions dû",they:"ils auraient dû"}},
     },
     templates:[
-      (s)=>({en:s+" ___ finish this before midnight.",fr:FS[s]+" ___ finir ça avant minuit."}),
-      (s)=>({en:s+" ___ wear a uniform at work.",fr:FS[s]+" ___ porter un uniforme au travail."}),
-      (s)=>({en:s+" ___ study harder to pass.",fr:FS[s]+" ___ travailler plus dur pour réussir."}),
-      (s)=>({en:s+" ___ pay the bill before Friday.",fr:FS[s]+" ___ payer la facture avant vendredi."}),
-      (s)=>({en:s+" ___ apologise for what happened.",fr:FS[s]+" ___ s'excuser pour ce qui s'est passé."}),
+      (s)=>({en:s+" ___ finish this before midnight.",fr:FS[s]+" [FR] finir ça avant minuit."}),
+      (s)=>({en:s+" ___ wear a uniform at work.",fr:FS[s]+" [FR] porter un uniforme au travail."}),
+      (s)=>({en:s+" ___ study harder to pass.",fr:FS[s]+" [FR] travailler plus dur pour réussir."}),
+      (s)=>({en:s+" ___ pay the bill before Friday.",fr:FS[s]+" [FR] payer la facture avant vendredi."}),
+      (s)=>({en:s+" ___ apologise for what happened.",fr:FS[s]+" [FR] s'excuser pour ce qui s'est passé."}),
+      (s)=>({en:s+" ___ wake up early every day.",fr:FS[s]+" [FR] se lever tôt chaque jour."}),
+      (s)=>({en:s+" ___ call her immediately.",fr:FS[s]+" [FR] l'appeler immédiatement."}),
+      (s)=>({en:s+" ___ explain everything to the manager.",fr:FS[s]+" [FR] tout expliquer au responsable."}),
     ]
   },
   want:{label:"WANT",fr:"vouloir",emoji:"💫",color:"#fd79a8",
@@ -1323,11 +1319,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would want",you:"would want","he/she":"would want",we:"would want",they:"would want"},fr:{I:"je voudrais",you:"tu voudrais","he/she":"il/elle voudrait",we:"nous voudrions",they:"ils voudraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ to learn English fluently.",fr:FS[s]+" ___ apprendre l'anglais couramment."}),
-      (s)=>({en:s+" ___ to travel the world.",fr:FS[s]+" ___ voyager dans le monde entier."}),
-      (s)=>({en:s+" ___ to change jobs.",fr:FS[s]+" ___ changer de travail."}),
-      (s)=>({en:s+" ___ more time to finish.",fr:FS[s]+" ___ plus de temps pour finir."}),
-      (s)=>({en:s+" ___ to go on holiday.",fr:FS[s]+" ___ partir en vacances."}),
+      (s)=>({en:s+" ___ to learn English fluently.",fr:FS[s]+" [FR] apprendre l'anglais couramment."}),
+      (s)=>({en:s+" ___ to travel the world.",fr:FS[s]+" [FR] voyager dans le monde entier."}),
+      (s)=>({en:s+" ___ to change jobs.",fr:FS[s]+" [FR] changer de travail."}),
+      (s)=>({en:s+" ___ more time to finish.",fr:FS[s]+" [FR] plus de temps pour finir."}),
+      (s)=>({en:s+" ___ to go on holiday.",fr:FS[s]+" [FR] partir en vacances."}),
+      (s)=>({en:s+" ___ a cup of coffee.",fr:FS[s]+" [FR] une tasse de café."}),
+      (s)=>({en:s+" ___ to be a doctor.",fr:FS[s]+" [FR] devenir médecin."}),
+      (s)=>({en:s+" ___ to speak to the manager.",fr:FS[s]+" [FR] parler au responsable."}),
     ]
   },
   say:{label:"SAY",fr:"dire",emoji:"💬",color:"#a29bfe",
@@ -1340,11 +1339,14 @@ const VERB_DATA={
       "Conditionnel":{level:"B2",en:{I:"would say",you:"would say","he/she":"would say",we:"would say",they:"would say"},fr:{I:"je dirais",you:"tu dirais","he/she":"il/elle dirait",we:"nous dirions",they:"ils diraient"}},
     },
     templates:[
-      (s)=>({en:s+" ___ hello to everyone in the room.",fr:FS[s]+" ___ bonjour à tout le monde dans la pièce."}),
-      (s)=>({en:s+" ___ the truth no matter what.",fr:FS[s]+" ___ la vérité quoi qu'il arrive."}),
-      (s)=>({en:s+" ___ sorry for the mistake.",fr:FS[s]+" ___ désolé(e) pour l'erreur."}),
-      (s)=>({en:s+" ___ that the project was finished.",fr:FS[s]+" ___ que le projet était terminé."}),
-      (s)=>({en:s+" ___ it loud and clear.",fr:FS[s]+" ___ clairement et distinctement."}),
+      (s)=>({en:s+" ___ hello to everyone in the room.",fr:FS[s]+" [FR] bonjour à tout le monde dans la pièce."}),
+      (s)=>({en:s+" ___ the truth no matter what.",fr:FS[s]+" [FR] la vérité quoi qu'il arrive."}),
+      (s)=>({en:s+" ___ sorry for the mistake.",fr:FS[s]+" [FR] désolé(e) pour l'erreur."}),
+      (s)=>({en:s+" ___ that the project was finished.",fr:FS[s]+" [FR] que le projet était terminé."}),
+      (s)=>({en:s+" ___ it loud and clear.",fr:FS[s]+" [FR] clairement et distinctement."}),
+      (s)=>({en:s+" ___ goodbye before leaving.",fr:FS[s]+" [FR] au revoir avant de partir."}),
+      (s)=>({en:s+" ___ nothing when asked.",fr:FS[s]+" [FR] rien quand on lui a demandé."}),
+      (s)=>({en:s+" ___ thank you after the meeting.",fr:FS[s]+" [FR] merci après la réunion."}),
     ]
   },
 };
@@ -1362,8 +1364,10 @@ function buildVerbPool(verbKey,tenseFilter){
         const res=typeof tmpl==="function"?tmpl(subj):null;
         if(!res)return;
         const enPart=res.en||"";
-        const frPart=res.fr||"";
-        const sentence=frPart?(enPart+"|||"+frPart):enPart;
+        const frRaw=res.fr||"";
+        // Remplace [FR] par la conjugaison française complète → phrase FR entière visible
+        const frComplete=frRaw.replace("[FR]",t.fr[subj]||answer);
+        const sentence=frComplete?(enPart+"|||"+frComplete):enPart;
         const allForms=[...new Set(Object.values(t.en))].filter(f=>f!==answer);
         const otherKey=Object.keys(vd.tenses).find(k=>k!==tenseName);
         const otherForms=otherKey?[...new Set(Object.values(vd.tenses[otherKey].en))].filter(f=>f!==answer):[];
@@ -1379,85 +1383,85 @@ function buildVerbPool(verbKey,tenseFilter){
 
 const ALL_QUESTIONS=(function(){
   const bank=[];let _id=1;
-  function add(cat,level,sentence,answer,wrongs,answerFR,note,sentenceFR){
-    const s=sentenceFR?sentence+"|||"+sentenceFR:sentence;
+  function add(cat,level,enSentence,answer,wrongs,answerFR,note,frSentence){
+    // FR sentence : phrase complète avec la bonne réponse déjà intégrée
+    const frFull=frSentence?frSentence.replace("___",answerFR||answer):null;
+    const sentence=frFull?(enSentence+"|||"+frFull):enSentence;
     const opts=shuffle([answer,...wrongs].slice(0,4));
-    bank.push({id:_id++,cat,level,sentence:s,answer,opts,answerFR,note:note||""});
+    bank.push({id:_id++,cat,level,sentence,answer,opts,answerFR,note:note||""});
   }
-  add("Verbes","A1","I ___ a student.","am",["is","are","be"],"je suis","I am | you are | he/she is","Je ___ étudiant(e).");
-  add("Verbes","A1","She ___ a teacher.","is",["am","are","be"],"il/elle est","I am | you are | he/she is","Elle ___ professeure.");
-  add("Verbes","A1","They ___ happy.","are",["is","am","be"],"ils sont","they are","Ils ___ contents.");
-  add("Verbes","A1","He ___ a car.","has",["have","had","is"],"il a","I have | he/she has","Il ___ une voiture.");
-  add("Verbes","A1","I ___ a dog.","have",["has","had","am"],"j'ai","I have | you have","J'___ un chien.");
-  add("Verbes","A1","She ___ her homework every day.","does",["do","did","make"],"il/elle fait","I do | he/she does","Elle ___ ses devoirs chaque jour.");
-  add("Verbes","A1","We ___ to school.","go",["goes","went","going"],"nous allons","I go | he/she goes","Nous ___ à l'école.");
-  add("Verbes","A1","I ___ speak Spanish.","don't",["doesn't","isn't","not"],"je ne parle pas","I don't | you don't","Je ___ parle pas espagnol.");
-  add("Verbes","A2","Yesterday I ___ to the store.","went",["go","goes","gone"],"je suis allé(e)","go → went → gone","Hier, je ___ au magasin.");
-  add("Verbes","A2","I ___ already eaten lunch.","have",["has","had","am"],"j'ai mangé","Present perfect: have/has + pp","J'___ déjà déjeuné.");
-  add("Verbes","A2","She ___ working when I called.","was",["were","is","has been"],"elle travaillait","Past continuous: was/were + ing","Elle ___ en train de travailler quand j'ai appelé.");
-  add("Verbes","A2","I ___ my keys yesterday.","lost",["lose","loses","have lost"],"j'ai perdu","lose → lost → lost","J'ai ___ mes clés hier.");
-  add("Verbes","B1","If I had more time, I ___ learn Japanese.","would",["will","could have","should"],"j'apprendrais","Cond 2: If + past → would + base","Si j'avais plus de temps, j'___ apprendre le japonais.");
-  add("Verbes","B1","She suggested ___ to the cinema.","going",["go","to go","went"],"d'aller","suggest + ing","Elle a suggéré ___ au cinéma.");
-  add("Verbes","B1","He managed ___ the exam.","to pass",["passing","pass","passed"],"à réussir","manage + to-inf","Il a réussi ___ l'examen.");
-  add("Verbes","B1","I enjoy ___ in the countryside.","walking",["walk","to walk","walked"],"me promener","enjoy + ing","J'apprécie ___ à la campagne.");
-  add("Verbes","B1","She promised ___ on time.","to arrive",["arriving","arrive","arrived"],"d'arriver","promise + to-inf","Elle a promis ___ à l'heure.");
-  add("Verbes","B1","I need to ___ this problem before the meeting.","sort out",["sort","sort up","sort through"],"régler","sort out = résoudre","Je dois ___ ce problème avant la réunion.");
-  add("Verbes","B2","If I ___ known, I would have helped.","had",["would have","have","knew"],"si j'avais su","Cond 3: If + had + pp","Si j'___ su, j'aurais aidé.");
-  add("Verbes","B2","She ___ have told me earlier!","should",["would","could","must"],"elle aurait dû","should have = reproche","Elle ___ me dire plus tôt !");
-  add("Verbes","B2","He ___ be at home — his light is on.","must",["should","would","has to"],"il doit être","must = déduction forte","Il ___ être chez lui — sa lumière est allumée.");
-  add("Verbes","B2","I remember ___ her at the conference.","meeting",["to meet","met","meet"],"avoir rencontré","remember + ing = souvenir passé","Je me souviens de l'avoir ___ à la conférence.");
-  add("Verbes","B2","She stopped ___ when the doctor advised her.","smoking",["to smoke","smoke","smoked"],"de fumer","stop + ing = arrêter","Elle a arrêté de ___ quand le médecin le lui a conseillé.");
-  add("Verbes","B2","He stopped ___ his phone — it had fallen.","to pick up",["picking up","pick up","picked up"],"pour ramasser","stop to = s'arrêter pour faire","Il s'est arrêté ___ son téléphone — il était tombé.");
-  add("Verbes","B2","The meeting was ___ until next week.","put off",["put away","put back","put out"],"reporté","put off = reporter","La réunion a été ___ à la semaine prochaine.");
-  add("Verbes","B2","I came ___ some old photos while cleaning.","across",["over","about","around"],"tombé sur","come across = tomber sur","Je suis tombé ___ de vieilles photos en faisant le ménage.");
-  add("Verbes","C1","Had I known earlier, I ___ acted differently.","would have",["had","would","could have"],"j'aurais agi","Inversion: Had I = If I had","Si j'avais su plus tôt, j'___ agi différemment.");
-  add("Verbes","C1","Not only ___ he arrive late, but he forgot the documents.","did",["was","had","has"],"inversion","Not only + inversion","Non seulement ___ il arriver en retard, mais il a oublié les documents.");
-  add("Verbes","C1","Little ___ they know about what was coming.","did",["had","were","would"],"inversion","Little + inversion","Ils ___ peu ce qui allait arriver.");
-  add("Modaux","B1","You ___ smoke here. It's forbidden.","mustn't",["don't have to","can't","shouldn't"],"interdit","mustn't = INTERDIT","Vous ___ fumer ici. C'est interdit.");
-  add("Modaux","B1","You ___ come if you don't want to. It's optional.","don't have to",["mustn't","can't","shouldn't"],"pas obligé","don't have to = pas obligatoire","Vous ___ venir si vous ne voulez pas. C'est optionnel.");
-  add("Modaux","B1","She ___ be sick — she looks terrible.","must",["should","might","would"],"déduction","must = déduction forte","Elle ___ être malade — elle a l'air terrible.");
-  add("Modaux","B1","He ___ be the new manager — I've heard rumours.","might",["must","will","should"],"peut-être","might = possibilité","Il ___ être le nouveau responsable — j'ai entendu des rumeurs.");
-  add("Modaux","B2","You ___ have told me! I would have come earlier.","should",["must","could","would"],"tu aurais dû","should have = reproche","Tu ___ me dire ! Je serais venu plus tôt.");
-  add("Modaux","B2","She ___ have passed — she studied so hard.","must",["should","could","might"],"elle a dû","must have = déduction passée","Elle ___ avoir réussi — elle a tellement travaillé.");
-  add("Modaux","B2","She ___ have forgotten — she never forgets.","can't",["mustn't","shouldn't","wouldn't"],"impossible","can't have = déduction négative","Elle ___ avoir oublié — elle n'oublie jamais.");
-  add("Modaux","C1","By the time you read this, I ___ left.","will have",["would have","shall have","have"],"je serai parti","Future perfect","Au moment où tu liras ceci, je ___ parti.");
-  add("Modaux","C1","If only I ___ more careful!","had been",["was","were","have been"],"si seulement j'avais été","If only + past perfect","Si seulement j'___ plus prudent !");
-  add("Prépositions","A1","She is ___ home.","at",["in","on","by"],"à la maison","at home / at school / at work","Elle est ___ maison.");
-  add("Prépositions","A1","He arrives ___ Monday.","on",["at","in","by"],"lundi","on + jour","Il arrive ___ lundi.");
-  add("Prépositions","A2","She lives ___ Paris.","in",["at","on","by"],"à Paris","in + ville","Elle habite ___ Paris.");
-  add("Prépositions","A2","They went ___ holiday last summer.","on",["in","at","for"],"en vacances","go on holiday","Ils sont partis ___ vacances l'été dernier.");
-  add("Prépositions","B1","He is accused ___ theft.","of",["for","with","about"],"de vol","accused of","Il est accusé ___ vol.");
-  add("Prépositions","B1","I'm looking forward ___ seeing you.","to",["at","for","about"],"à te voir","look forward TO + ing","J'ai hâte ___ te voir.");
-  add("Prépositions","B1","She is married ___ a doctor.","to",["with","by","of"],"à un médecin","married TO","Elle est mariée ___ un médecin.");
-  add("Prépositions","B1","He succeeded ___ passing the exam.","in",["at","on","with"],"à réussir","succeed in + ing","Il a réussi ___ passer l'examen.");
-  add("Prépositions","B2","She has been working here ___ 2018.","since",["for","from","in"],"depuis 2018","since + point | for + durée","Elle travaille ici ___ 2018.");
-  add("Prépositions","B2","I came across an article ___ accident.","by",["with","on","in"],"par accident","by accident / by chance","Je suis tombé sur un article ___ hasard.");
-  add("Prépositions","B2","She is responsible ___ the whole project.","for",["of","to","with"],"responsable de","responsible for","Elle est responsable ___ tout le projet.");
-  add("Prépositions","C1","This issue is tantamount ___ a disaster.","to",["as","with","of"],"équivalant à","tantamount to","Cette situation est équivalente ___ un désastre.");
-  add("Adverbes","B1","He ___ arrives on time — he's always late.","rarely",["rare","hard","hardly"],"rarement","rarely = presque jamais","Il ___ arrive à l'heure — il est toujours en retard.");
-  add("Adverbes","B1","I ___ understood what she meant until much later.","barely",["hard","hardly","near"],"à peine","barely = à peine","J'ai ___ compris ce qu'elle voulait dire bien plus tard.");
-  add("Adverbes","B1","The project was expensive. ___, it was completed on time.","Nevertheless",["However","Although","Despite"],"néanmoins","Nevertheless = néanmoins","Le projet était cher. ___, il a été terminé à temps.");
-  add("Adverbes","B1","___ the rain, we decided to go for a walk.","Despite",["Although","However","Nevertheless"],"malgré","Despite + NOM","___ la pluie, nous avons décidé de nous promener.");
-  add("Adverbes","B2","The results were ___ better than last year.","significantly",["significant","signify","sign"],"nettement","significantly","Les résultats étaient ___ meilleurs que l'année dernière.");
-  add("Adverbes","B2","He ___ refused to answer any questions.","flatly",["flat","flattery","flatten"],"catégoriquement","flatly refused","Il a ___ refusé de répondre à toute question.");
-  add("Adverbes","B2","___ she was exhausted, she continued working.","Although",["Despite","Nevertheless","However"],"bien que","Although + PHRASE","___ elle était épuisée, elle a continué à travailler.");
-  add("Adverbes","C1","The minister ___ denied any involvement.","categorically",["category","categorical","categoric"],"catégoriquement","categorically denied","Le ministre a ___ nié toute implication.");
-  add("Adverbes","C1","She was ___ aware of the risks involved.","acutely",["acute","acuteness","sharply"],"pleinement","acutely aware","Elle était ___ consciente des risques.");
-  add("Adverbes","C1","The policy was ___ flawed from the start.","fundamentally",["fundamental","fundamentalism","founded"],"fondamentalement","fundamentally flawed","La politique était ___ défaillante dès le début.");
-  add("Adjectifs","B1","She gave a very ___ speech.","compelling",["compelled","compel","compulsion"],"convaincant","compelling = captivant","Elle a fait un discours très ___.");
-  add("Adjectifs","B1","The film was ___ — I fell asleep.","tedious",["tidy","tender","technical"],"ennuyeux","tedious = ennuyeux","Le film était ___ — je me suis endormi.");
-  add("Adjectifs","B2","The company's decision was ___.","baffling",["baffle","baffled","bafflement"],"déconcertant","baffling = cause confusion","La décision de l'entreprise était ___.");
-  add("Adjectifs","B2","She felt completely ___ after the negotiation.","exhausted",["exhausting","exhaust","exhaustion"],"épuisée","exhausted = épuisé","Elle se sentait complètement ___ après la négociation.");
-  add("Adjectifs","B2","The evidence against him was ___.","overwhelming",["overwhelmed","overwhelm","overwhich"],"accablant","overwhelming = écrasant","Les preuves contre lui étaient ___.");
-  add("Adjectifs","B2","His approach to the problem was ___.","pragmatic",["pragmatism","pragmatist","pragmatically"],"pragmatique","pragmatic = pratique","Son approche du problème était ___.");
-  add("Adjectifs","C1","The new policy has had ___ consequences.","far-reaching",["far-fetched","long-reaching","wide-reaching"],"considérables","far-reaching = de grande portée","La nouvelle politique a eu des conséquences ___.");
-  add("Articles/Pronoms","A1","___ sun rises in the east.","The",["A","An","—"],"le soleil","the = défini, unique","___ soleil se lève à l'est.");
-  add("Articles/Pronoms","A1","I love ___ music.","—",["the","a","an"],"rien","Pas d'article pour concepts généraux","J'adore ___ musique.");
-  add("Articles/Pronoms","B1","He plays ___ guitar in a band.","the",["a","—","an"],"de la guitare","play the + instrument","Il joue ___ guitare dans un groupe.");
-  add("Articles/Pronoms","B1","That is the man ___ car was stolen.","whose",["who's","whom","which"],"dont la voiture","whose = possessif relatif","C'est l'homme ___ voiture a été volée.");
-  add("Articles/Pronoms","B2","___ patience is a virtue.","—",["The","A","An"],"rien","Pas d'article pour qualités abstraites","___ patience est une vertu.");
-  add("Articles/Pronoms","B2","It was ___ most difficult decision of his life.","the",["a","—","an"],"la","the + superlatif","C'était ___ décision la plus difficile de sa vie.");
-  add("Articles/Pronoms","C1","___ who hesitates is lost.","He",["One","They","Those"],"celui qui","He who = celui qui","___ hésite est perdu.");
+  add("Verbes","A1","I ___ a student.","am",["is","are","be"],"suis","I am | you are | he/she is","Je suis étudiant(e).");
+  add("Verbes","A1","She ___ a teacher.","is",["am","are","be"],"est","I am | you are | he/she is","Elle est professeure.");
+  add("Verbes","A1","They ___ happy.","are",["is","am","be"],"sont","they are","Ils sont contents.");
+  add("Verbes","A1","He ___ a car.","has",["have","had","is"],"a","I have | he/she has","Il a une voiture.");
+  add("Verbes","A1","I ___ a dog.","have",["has","had","am"],"ai","I have | you have","J'ai un chien.");
+  add("Verbes","A1","She ___ her homework every day.","does",["do","did","make"],"fait","I do | he/she does","Elle fait ses devoirs chaque jour.");
+  add("Verbes","A1","We ___ to school.","go",["goes","went","going"],"allons","I go | he/she goes","Nous allons à l'école.");
+  add("Verbes","A1","I ___ speak Spanish.","don't",["doesn't","isn't","not"],"ne parle pas","I don't | you don't","Je ne parle pas espagnol.");
+  add("Verbes","A2","Yesterday I ___ to the store.","went",["go","goes","gone"],"suis allé(e)","go → went → gone","Hier, je suis allé(e) au magasin.");
+  add("Verbes","A2","I ___ already eaten lunch.","have",["has","had","am"],"ai","Present perfect: have/has + pp","J'ai déjà déjeuné.");
+  add("Verbes","A2","She ___ working when I called.","was",["were","is","has been"],"travaillait","Past continuous: was/were + ing","Elle travaillait quand j'ai appelé.");
+  add("Verbes","A2","I ___ my keys yesterday.","lost",["lose","loses","have lost"],"perdu","lose → lost → lost","J'ai perdu mes clés hier.");
+  add("Verbes","B1","If I had more time, I ___ learn Japanese.","would",["will","could have","should"],"apprendrais","Cond 2: If + past → would + base","Si j'avais plus de temps, j'apprendrais le japonais.");
+  add("Verbes","B1","She suggested ___ to the cinema.","going",["go","to go","went"],"d'aller","suggest + ing","Elle a suggéré d'aller au cinéma.");
+  add("Verbes","B1","He managed ___ the exam.","to pass",["passing","pass","passed"],"à réussir","manage + to-inf","Il a réussi à réussir l'examen.");
+  add("Verbes","B1","I enjoy ___ in the countryside.","walking",["walk","to walk","walked"],"me promener","enjoy + ing","J'apprécie me promener à la campagne.");
+  add("Verbes","B1","She promised ___ on time.","to arrive",["arriving","arrive","arrived"],"d'arriver","promise + to-inf","Elle a promis d'arriver à l'heure.");
+  add("Verbes","B1","I need to ___ this problem before the meeting.","sort out",["sort","sort up","sort through"],"régler","sort out = résoudre","Je dois régler ce problème avant la réunion.");
+  add("Verbes","B2","If I ___ known, I would have helped.","had",["would have","have","knew"],"avais su","Cond 3: If + had + pp","Si j'avais su, j'aurais aidé.");
+  add("Verbes","B2","She ___ have told me earlier!","should",["would","could","must"],"aurait dû","should have = reproche","Elle aurait dû me dire plus tôt !");
+  add("Verbes","B2","He ___ be at home — his light is on.","must",["should","would","has to"],"doit être","must = déduction forte","Il doit être chez lui — sa lumière est allumée.");
+  add("Verbes","B2","I remember ___ her at the conference.","meeting",["to meet","met","meet"],"avoir rencontré","remember + ing = souvenir passé","Je me souviens d'avoir rencontré à la conférence.");
+  add("Verbes","B2","She stopped ___ when the doctor advised her.","smoking",["to smoke","smoke","smoked"],"de fumer","stop + ing = arrêter","Elle a arrêté de fumer quand le médecin le lui a conseillé.");
+  add("Verbes","B2","He stopped ___ his phone — it had fallen.","to pick up",["picking up","pick up","picked up"],"pour ramasser","stop to = s'arrêter pour","Il s'est arrêté pour ramasser son téléphone.");
+  add("Verbes","B2","The meeting was ___ until next week.","put off",["put away","put back","put out"],"reporté","put off = reporter","La réunion a été reportée à la semaine prochaine.");
+  add("Verbes","B2","I came ___ some old photos while cleaning.","across",["over","about","around"],"tombé sur","come across = tomber sur","Je suis tombé sur de vieilles photos en faisant le ménage.");
+  add("Verbes","C1","Had I known earlier, I ___ acted differently.","would have",["had","would","could have"],"aurais agi","Inversion: Had I = If I had","Si j'avais su plus tôt, j'aurais agi différemment.");
+  add("Verbes","C1","Not only ___ he arrive late, but he forgot the documents.","did",["was","had","has"],"inversion","Not only + inversion","Non seulement est-il arrivé en retard, mais il a oublié les documents.");
+  add("Verbes","C1","Little ___ they know about what was coming.","did",["had","were","would"],"inversion","Little + inversion","Ils savaient peu ce qui allait arriver.");
+  add("Modaux","B1","You ___ smoke here. It's forbidden.","mustn't",["don't have to","can't","shouldn't"],"ne dois pas","mustn't = INTERDIT","Vous ne devez pas fumer ici. C'est interdit.");
+  add("Modaux","B1","You ___ come if you don't want to. It's optional.","don't have to",["mustn't","can't","shouldn't"],"n'êtes pas obligé","don't have to = pas obligatoire","Vous n'êtes pas obligé de venir si vous ne voulez pas.");
+  add("Modaux","B1","She ___ be sick — she looks terrible.","must",["should","might","would"],"doit être","must = déduction forte","Elle doit être malade — elle a l'air terrible.");
+  add("Modaux","B1","He ___ be the new manager — I've heard rumours.","might",["must","will","should"],"pourrait être","might = possibilité","Il pourrait être le nouveau responsable — j'ai entendu des rumeurs.");
+  add("Modaux","B2","You ___ have told me! I would have come earlier.","should",["must","could","would"],"aurais dû","should have = reproche","Tu aurais dû me dire ! Je serais venu plus tôt.");
+  add("Modaux","B2","She ___ have passed — she studied so hard.","must",["should","could","might"],"a dû","must have = déduction passée","Elle a dû réussir — elle a tellement travaillé.");
+  add("Modaux","B2","She ___ have forgotten — she never forgets.","can't",["mustn't","shouldn't","wouldn't"],"ne peut pas avoir","can't have = déduction négative","Elle ne peut pas avoir oublié — elle n'oublie jamais.");
+  add("Modaux","C1","By the time you read this, I ___ left.","will have",["would have","shall have","have"],"serai parti","Future perfect","Au moment où tu liras ceci, je serai parti.");
+  add("Modaux","C1","If only I ___ more careful!","had been",["was","were","have been"],"avais été","If only + past perfect","Si seulement j'avais été plus prudent !");
+  add("Prépositions","A1","She is ___ home.","at",["in","on","by"],"chez","at home","Elle est chez elle.");
+  add("Prépositions","A1","He arrives ___ Monday.","on",["at","in","by"],"le","on + jour","Il arrive le lundi.");
+  add("Prépositions","A2","She lives ___ Paris.","in",["at","on","by"],"à","in + ville","Elle habite à Paris.");
+  add("Prépositions","A2","They went ___ holiday last summer.","on",["in","at","for"],"en","go on holiday","Ils sont partis en vacances l'été dernier.");
+  add("Prépositions","B1","He is accused ___ theft.","of",["for","with","about"],"de","accused of","Il est accusé de vol.");
+  add("Prépositions","B1","I'm looking forward ___ seeing you.","to",["at","for","about"],"à","look forward TO + ing","J'ai hâte à te voir.");
+  add("Prépositions","B1","She is married ___ a doctor.","to",["with","by","of"],"à","married TO","Elle est mariée à un médecin.");
+  add("Prépositions","B1","He succeeded ___ passing the exam.","in",["at","on","with"],"à","succeed in + ing","Il a réussi à passer l'examen.");
+  add("Prépositions","B2","She has been working here ___ 2018.","since",["for","from","in"],"depuis","since + point | for + durée","Elle travaille ici depuis 2018.");
+  add("Prépositions","B2","I came across an article ___ accident.","by",["with","on","in"],"par","by accident / by chance","Je suis tombé sur un article par hasard.");
+  add("Prépositions","B2","She is responsible ___ the whole project.","for",["of","to","with"],"de","responsible for","Elle est responsable de tout le projet.");
+  add("Adverbes","B1","He ___ arrives on time — he's always late.","rarely",["rare","hard","hardly"],"arrive rarement","rarely = presque jamais","Il arrive rarement à l'heure — il est toujours en retard.");
+  add("Adverbes","B1","I ___ understood what she meant until much later.","barely",["hard","hardly","near"],"avais à peine","barely = à peine","J'avais à peine compris ce qu'elle voulait dire bien plus tard.");
+  add("Adverbes","B1","The project was expensive. ___, it was completed on time.","Nevertheless",["However","Although","Despite"],"Néanmoins","Nevertheless = néanmoins","Le projet était cher. Néanmoins, il a été terminé à temps.");
+  add("Adverbes","B1","___ the rain, we decided to go for a walk.","Despite",["Although","However","Nevertheless"],"Malgré","Despite + NOM","Malgré la pluie, nous avons décidé de nous promener.");
+  add("Adverbes","B2","The results were ___ better than last year.","significantly",["significant","signify","sign"],"nettement","significantly","Les résultats étaient nettement meilleurs que l'année dernière.");
+  add("Adverbes","B2","He ___ refused to answer any questions.","flatly",["flat","flattery","flatten"],"catégoriquement","flatly refused","Il a catégoriquement refusé de répondre à toute question.");
+  add("Adverbes","B2","___ she was exhausted, she continued working.","Although",["Despite","Nevertheless","However"],"Bien que","Although + PHRASE","Bien qu'elle était épuisée, elle a continué à travailler.");
+  add("Adverbes","C1","The minister ___ denied any involvement.","categorically",["category","categorical","categoric"],"catégoriquement","categorically denied","Le ministre a catégoriquement nié toute implication.");
+  add("Adverbes","C1","She was ___ aware of the risks involved.","acutely",["acute","acuteness","sharply"],"pleinement","acutely aware","Elle était pleinement consciente des risques.");
+  add("Adjectifs","B1","She gave a very ___ speech.","compelling",["compelled","compel","compulsion"],"convaincant","compelling = captivant","Elle a fait un discours très convaincant.");
+  add("Adjectifs","B1","The film was ___ — I fell asleep.","tedious",["tidy","tender","technical"],"ennuyeux","tedious = ennuyeux","Le film était ennuyeux — je me suis endormi.");
+  add("Adjectifs","B2","The company's decision was ___.","baffling",["baffle","baffled","bafflement"],"déconcertant","baffling = déconcertant","La décision de l'entreprise était déconcertante.");
+  add("Adjectifs","B2","She felt completely ___ after the negotiation.","exhausted",["exhausting","exhaust","exhaustion"],"épuisée","exhausted = épuisé","Elle se sentait complètement épuisée après la négociation.");
+  add("Adjectifs","B2","The evidence against him was ___.","overwhelming",["overwhelmed","overwhelm","overwhich"],"accablant","overwhelming = écrasant","Les preuves contre lui étaient accablantes.");
+  add("Adjectifs","B2","His approach to the problem was ___.","pragmatic",["pragmatism","pragmatist","pragmatically"],"pragmatique","pragmatic = pratique","Son approche du problème était pragmatique.");
+  add("Adjectifs","C1","The new policy has had ___ consequences.","far-reaching",["far-fetched","long-reaching","wide-reaching"],"considérables","far-reaching = de grande portée","La nouvelle politique a eu des conséquences considérables.");
+  add("Articles/Pronoms","A1","___ sun rises in the east.","The",["A","An","—"],"Le","the = défini, unique","Le soleil se lève à l'est.");
+  add("Articles/Pronoms","A1","I love ___ music.","—",["the","a","an"],"la","Pas d'article pour concepts généraux","J'adore la musique.");
+  add("Articles/Pronoms","B1","He plays ___ guitar in a band.","the",["a","—","an"],"de la","play the + instrument","Il joue de la guitare dans un groupe.");
+  add("Articles/Pronoms","B1","That is the man ___ car was stolen.","whose",["who's","whom","which"],"dont la","whose = possessif relatif","C'est l'homme dont la voiture a été volée.");
+  add("Articles/Pronoms","B2","___ patience is a virtue.","—",["The","A","An"],"La","Pas d'article pour qualités abstraites","La patience est une vertu.");
+  add("Articles/Pronoms","B2","It was ___ most difficult decision of his life.","the",["a","—","an"],"la","the + superlatif","C'était la décision la plus difficile de sa vie.");
+  add("Articles/Pronoms","C1","___ who hesitates is lost.","He",["One","They","Those"],"Celui","He who = celui qui","Celui qui hésite est perdu.");
   return bank;
 })();
 
@@ -1501,8 +1505,8 @@ function App(){
   const[score,setScore]=useState(0);
   const[streak,setStreak]=useState(0);
   const[total,setTotal]=useState(0);
-  const[errors,setErrors]=useState(()=>loadLS("ep_err7",{}));
-  const[stats,setStats]=useState(()=>loadLS("ep_st7",{total:0,correct:0,byLevel:{},byCat:{}}));
+  const[errors,setErrors]=useState(()=>loadLS("ep_err8",{}));
+  const[stats,setStats]=useState(()=>loadLS("ep_st8",{total:0,correct:0,byLevel:{},byCat:{}}));
   const[dailyErrors,setDailyErrors]=useState([]);
   const[dailyIdx,setDailyIdx]=useState(0);
   const[todayDone,setTodayDone]=useState(()=>loadLS("ep_today","")===new Date().toDateString());
@@ -1541,13 +1545,13 @@ function App(){
       const ne={...errors};
       if(!ok){ne[currentQ.id]=(ne[currentQ.id]||0)+1;}
       else if(ne[currentQ.id]){ne[currentQ.id]=Math.max(0,ne[currentQ.id]-1);if(ne[currentQ.id]===0)delete ne[currentQ.id];}
-      setErrors(ne);saveLS("ep_err7",ne);
+      setErrors(ne);saveLS("ep_err8",ne);
     }
     const ns={total:stats.total+1,correct:stats.correct+(ok?1:0),byLevel:{...stats.byLevel},byCat:{...stats.byCat}};
     const lvl=currentQ.level,ct=currentQ.cat;
     ns.byLevel[lvl]=ns.byLevel[lvl]||{total:0,correct:0};ns.byLevel[lvl].total++;if(ok)ns.byLevel[lvl].correct++;
     ns.byCat[ct]=ns.byCat[ct]||{total:0,correct:0};ns.byCat[ct].total++;if(ok)ns.byCat[ct].correct++;
-    setStats(ns);saveLS("ep_st7",ns);
+    setStats(ns);saveLS("ep_st8",ns);
   },[answered,currentQ,errors,stats]);
 
   const nextQ=useCallback(()=>{
@@ -1627,7 +1631,7 @@ function App(){
           e("div",null,
             e("div",{style:{display:"flex",alignItems:"center",gap:8,marginBottom:3}},e("span",{style:{fontSize:18}},"📚"),e("span",{style:{fontWeight:700,color:"#6c63ff",fontSize:14}},"15 Verbes Essentiels")),
             e("div",{style:{fontSize:11,color:"#7070a0"}},"BE • HAVE • DO • MUST • WANT • SAY..."),
-            e("div",{style:{fontSize:10,color:"#5050a0",marginTop:2}},"Tous les temps • Traductions FR incluses")
+            e("div",{style:{fontSize:10,color:"#5050a0",marginTop:2}},"Phrase FR complète à chaque question")
           ),
           e("div",{style:{background:"#6c63ff22",color:"#6c63ff",padding:"7px 12px",borderRadius:8,fontWeight:700,fontSize:12}},"Go →")
         )
@@ -1817,7 +1821,7 @@ function App(){
           );
         })
       ),
-      e("button",{onClick:()=>{if(confirm("Remettre à zéro ?")){const emp={total:0,correct:0,byLevel:{},byCat:{}};setStats(emp);saveLS("ep_st7",emp);}},style:{width:"100%",padding:11,borderRadius:11,color:"#5050a0",background:"transparent",border:"1px solid #2a2a4a",fontSize:12}},"🗑 Réinitialiser")
+      e("button",{onClick:()=>{if(confirm("Remettre à zéro ?")){const emp={total:0,correct:0,byLevel:{},byCat:{}};setStats(emp);saveLS("ep_st8",emp);}},style:{width:"100%",padding:11,borderRadius:11,color:"#5050a0",background:"transparent",border:"1px solid #2a2a4a",fontSize:12}},"🗑 Réinitialiser")
     );
   }
   return null;
